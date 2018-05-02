@@ -1,0 +1,157 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/echarts.min.js')
+    title 基金档案
+    script(type='text/javascript').
+      setAdaptive();
+  body.fund-fundArchives
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 基金档案
+    .content-body
+      div
+        .fund_info(style='border-bottom: 1px solid #cccccc;')
+          .span3.selected.J_doc(style='padding-left: 40px;text-align: left;') 基金概况
+          .span3.J_notice 资产配置
+          .span3.J_know 分红拆分
+        #FUND_L.base_div(style='margin-top:10px')
+          .base_div.line_block_div.hide_monetary_fund
+            table.dataintable
+              tbody
+                tr
+                  td.table_block_left.border_right.border_bottom.title 基金全称
+                  td#fundName.table_block_right.border_bottom
+                tr
+                  td.table_block_left.border_right.border_bottom.title 基金简称
+                  td#fundNameAbbr.table_block_right.border_bottom
+                tr
+                  td.table_block_left.border_right.border_bottom.title 基金代码
+                  td#fundCode.table_block_right.border_bottom
+                tr
+                  td.table_block_left.border_right.border_bottom.title 基金类型
+                  td#fundType.table_block_right.border_bottom
+                tr
+                  td.table_block_left.border_right.border_bottom.title 风险等级
+                  td#riskLevelString.table_block_right.border_bottom
+                tr
+                  td.table_block_left.border_right.border_bottom.title 成立时间
+                  td#establishmentDate.table_block_right.border_bottom
+                tr
+                  td.table_block_left.border_right.border_bottom.title 资产规模
+                  td#marketValue.table_block_right.border_bottom
+                tr
+                  td.table_block_left.border_right.border_bottom.title 份额规模
+                  td#foundedSize.table_block_right.border_bottom
+                tr
+                  td.table_block_left.border_right.border_bottom.title 基金公司
+                  td#fundCompany.table_block_right.border_bottom
+                tr
+                  td.table_block_left.border_right.border_bottom.title 基金托管人
+                  td#fundTrustee.table_block_right.border_bottom
+                tr
+                  td.table_block_left.border_right.title 基金经理
+                  td#fundManager.table_block_right
+          .base_div.line_block_div.fund_space(style='background-color: #ebebeb;')
+          .base_div.line_block_div.hide_monetary_fund
+            table.dataintable
+              tbody
+                tr
+                  td.invest_block_left.border_right.border_bottom.title
+                    | 投资目标
+                  td#investTarget.invest_block_right.border_bottom
+                tr
+                  td.invest_block_left.border_right.border_bottom.title 投资范围
+                  td#investField.invest_block_right.border_bottom
+                tr
+                  td.invest_block_left.border_right.title 投资策略
+                  td#investOrientation.invest_block_right
+        #FUND_M.base_div(style='display: none; margin-top:10px')
+          .base_div.line_block_div.fund_space.font2(style='background-color: #ebebeb;')
+            table.dataintable
+              tbody
+                tr.dividendResolution
+                  td.dividendResolution_tr 资产分布
+          #myChart
+          table.dataintable
+            tbody
+              tr.fundManagerEx
+                td.invest_block_left.border_top.font2(style='color: #B3A09A;')
+                  | 资产类型
+                td.invest_block_middle.border_top.font2(style='color: #B3A09A;')
+                  | 金额（亿元）
+                td.invest_block_right.border_top.font2(style='color: #B3A09A;')
+                  | 占净值比
+          table.dataintable
+            tbody#dividend_zc
+          .base_div.line_block_div.fund_space2(style='background-color: #ebebeb;')
+          .base_div.line_block_div.hide_monetary_fund
+            table.dataintable
+              tbody
+                tr.large(style='text-align: left')
+                  td.large_tr 十大重仓
+          table.dataintable
+            tbody
+              tr.fundManagerEx
+                td.invest_block_left2.border_right.border_top.font2
+                  | 名称
+                td.invest_block_right2.border_right.border_top.font2(style='color: #967772;')
+                  | 占净值比
+          table.dataintable
+            tbody#large_data
+          .base_div.line_block_div.fund_space2(style='background-color: #ebebeb;')
+          .base_div.line_block_div.hide_monetary_fund
+            table.dataintable
+              tbody
+                tr.large(style='text-align: left')
+                  td.large_tr 行业分布
+          table.dataintable
+            tbody
+              tr.fundManagerEx
+                td.invest_block_left2.border_top.font2
+                  | 行业名称
+                td.invest_block_right2.border_top.font2(style='color: #967772;')
+                  | 占净值比
+          table.dataintable
+            tbody#industry_distribution
+        #FUND_R.base_div(style='display: none; margin-top:10px')
+          .base_div.line_block_div.fund_space(style='background-color: #ebebeb;')
+          .base_div.line_block_div.hide_monetary_fund
+            table.dataintable
+              tbody
+                tr.dividendResolution
+                  td.dividendResolution_tr 分红记录
+            table.dataintable
+              tbody
+                tr.fundManagerEx
+                  td.invest_block_left.font2
+                    | 权益登记日
+                  td.invest_block_middle.font2
+                    | 红利发放日
+                  td.invest_block_right.font2
+                    | 每份分红
+            table.dataintable
+              tbody#dividend
+          .base_div.line_block_div.fund_space(style='background-color: #ebebeb;')
+          table.dataintable
+            tbody
+              tr.dividendResolution
+                td.dividendResolution_tr 折算拆分
+          table.dataintable
+            tbody
+              tr.fundManagerEx
+                td.invest_block_left2.font2
+                  | 折算拆分日
+                td.invest_block_middle2.font2
+                  | 比例
+          table.dataintable
+            tbody#resolution
+
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type = 'text/javascript', src = '/static/js/fundArchives.js').

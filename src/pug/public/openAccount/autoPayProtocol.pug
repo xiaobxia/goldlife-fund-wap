@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title 银行自动转账授权书
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.public-openAccount-autoPayProtocol(style='background-color:white')
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 银行自动转账授权书
+    .content-body
+      .content
+        h3.center 银行自动转账授权书
+        div 杭州科地瑞富基金销售有限公司：
+        br
+        p.indent 本人（授权人）现就本人所开立的银行账户，授权杭州科地瑞富基金销售有限公司（被授权人，以下简称“贵公司”）通过贵公司指定的第三方支付机构及商业银行按照本人在贵公司基金销售平台上的交易申请金额从本人的银行账户主动进行交易资金的代收扣收。
+        p 本账户所有人现将本人所开立的账户：
+        p='账户姓名：'+accountName
+        p='账户账号：'+account
+        p='账户开户行名称：'+bankName
+        p 账户开立证件类型：身份证
+        p='账户开立证件号码：'+idNo
+        p 本人保证上述数据 真实、准确。
+        p.indent  本人知晓并确认，本授权书系使用本人身份证件号码（或贵公司基金销售平台账户）、以网络在线点击确认的方式向贵公司发出。本授权书自本人在贵公司基金销售平台网站输入身份证件号码（或交易账户密码）并点击确认时生效。本人已经通过本授权书确认代扣款项的银行账户信息，在代扣的过程中，贵公司根据本授权书提供的银行账户信息进行相关操作，无需再向本人确认银行账户信息和密码。
+        p.indent 本人在此声明已清楚知悉本次授权代收的性质和后果。贵公司根据本授权书所采取的全部行动和措施的法律后果均由本人承担。
+        .fr='授权日期：'+year+'年'+month+'月'+day+'日'
+        .clear
+    script(type='text/javascript', src='/static/js/commonBody.js')

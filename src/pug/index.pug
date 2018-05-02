@@ -1,0 +1,61 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 金品生活下的基金H5
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+    style(type='text/css').
+      body {
+        background-color: #999;
+      }
+
+      .block-item {
+        margin: 10px 0;
+      }
+
+      .block-item a {
+        display: block;
+        padding: 15px 0;
+        color: #fff;
+        background-color: #555;
+        text-align: center;
+        text-decoration: none;
+      }
+  body
+    .block-item
+      a(href='/yaowei') 姚伟
+    .block-item
+      a(href='/temp1?banner=true') 陈灵捷
+    script(type='text/javascript').
+      var dataList1 = !{JSON.stringify(dataList)};
+      var dataMap1 = !{JSON.stringify(dataMap)};
+      var dataStr1 = '#{dataStr}';
+      console.log(dataList1)
+      console.log(dataMap1)
+      console.log(dataStr1)
+      $.ajax({
+        url: '/codi-api/query/t0_funds',
+        dataType: 'json',
+        type: 'get',
+        error: function (err) {
+          console.log(err)
+          if (err) {
+            mui.toast(err.statusText);
+            return;
+          }
+        },
+        success: function (data) {
+          console.log(data)
+          if (!data.success === true) {
+            mui.toast(data.errorMessage);
+            return;
+          }
+        }
+      });
+

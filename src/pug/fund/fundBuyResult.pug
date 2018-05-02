@@ -1,0 +1,73 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 申购结果
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.fund-fundBuyResult
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 申购结果
+    .content-body
+      if payType == 'BANK'
+        .step-wrap.step-2
+          .step-1-wrap.step-index-wrap.active-right
+            .right-bar
+            .index-wrap ￥
+            .step-content 付款
+          .step-2-wrap.step-index-wrap
+            .left-bar
+            .index-wrap
+              span.mui-icon.mui-icon-checkmarkempty
+            .step-content 份额确认
+        ul.mui-table-view
+          li.mui-table-view-cell
+            .left 基金名称
+            .right=fundName
+          li.mui-table-view-cell
+            .left 买入金额
+            .right=fundBalance + '元'
+          li.mui-table-view-cell
+            .left 支付方式
+            .right=bankName + '(****' + bankAccount.substr(-4, 4) + ')'
+          li.mui-table-view-cell
+            .left=orderDate
+            .right=orderTime
+      else
+        .step-wrap.step-2
+          .step-1-wrap.step-index-wrap.active-right
+            .right-bar
+            .index-wrap ￥
+            .step-content 提交
+          .step-2-wrap.step-index-wrap
+            .left-bar
+            .index-wrap
+              span.mui-icon.mui-icon-checkmarkempty
+            .step-content 付款
+        ul.mui-table-view
+          li.mui-table-view-cell
+            .left 基金名称
+            .right=fundName
+          li.mui-table-view-cell
+            .left 申购金额
+            .right=fundBalance + '元'
+          li.mui-table-view-cell
+            .left 支付方式
+            .right 汇款支付
+          li.mui-table-view-cell
+            .left=orderDate
+            .right=orderTime
+      .other T日买入，T+1日申购确认份额，T+2日可查看收益。交易日，以每天15:00为界限，15:00之前为T日，15:00之后为T+1日，周末及法定节假日不属于交易日
+      a#next-btn.mui-btn.mui-btn-warning.center(type='button') 完成
+      if payType == 'BANK'
+        .other-text 15:00之前撤单有效
+      else
+        .other-text 15:00之前汇款有效
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript' src='/static/js/fundBuyResult.js')

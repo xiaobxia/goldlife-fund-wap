@@ -1,0 +1,104 @@
+.fund-title {
+  padding: 30px 45px 25px 45px;
+  font-size: 34px;
+  color: $brown-text-color;
+}
+.mui-toast-container{
+  bottom: 200px;
+}
+
+.mui-table-view.select {
+  margin-top: 20px;
+  padding-left: 45px;
+  .mui-icon-checkmarkempty {
+    display: none;
+  }
+  .mui-table-view-cell {
+    position: relative;
+    height: auto;
+    padding: 30px 0;
+    border: none;
+    .title {
+      font-size: 30px;
+      color: $main-text-color;
+      margin-bottom: 15px;
+    }
+    .explain {
+      font-size: 28px;
+      color: $grey-text-color;
+    }
+    &.active {
+      .mui-icon-checkmarkempty {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 35px;
+
+        margin: auto 0;
+        color: #fff;
+        background-color: $main-color;
+        width: 36px;
+        height: 36px;
+        font-size: 36px;
+        border-radius: 36px;
+      }
+    }
+  }
+
+}
+.other{
+
+  padding: 20px 45px;
+  a{
+    color: $main-color;
+  }
+}
+
+.mui-table-view.input{
+  padding-left: 45px;
+  .mui-table-view-cell{
+    border-bottom: 1px solid $grey-border-color;
+  }
+  .label{
+
+  }
+  .text-block{
+    position: absolute;
+    top: 15px;
+    left: 70px;
+
+    p{
+      width: 200px;
+      font-size: 26px;
+      line-height: 1.2;
+
+      color: $grey-text-color;
+    }
+  }
+  .icon {
+    display: block;
+    position: absolute;
+    top: 17px;
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+  }
+  .OFFLINE {
+    background-size: 56px auto;
+  }
+}
+.mui-input-group{
+
+  padding-left: 45px;
+}
+
+.mui-btn-warning{
+
+  margin-top: 100px;
+}
+
+.company-warn{
+ margin-top: 200px;
+}
+

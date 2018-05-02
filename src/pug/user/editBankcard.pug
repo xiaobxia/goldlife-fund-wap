@@ -1,0 +1,55 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    title 修改银行卡信息
+    script(type='text/javascript').
+      setAdaptive();
+  body.user-editBankcard.fund-fundBuy.combination-combinationBuy.buy
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 修改银行卡信息
+    .content-body
+      .editbank
+        span(class=bankCode)
+        .bankmessage=bankName + '(尾号:' + userBankNo + ')'
+      .banklist
+        div 支行
+        div
+        span.icon_r
+      .title
+      .btn 确定
+    .mui-popup-backdrop
+      .password-popup
+        .password-popup-inner
+          .password-popup-title 请输入交易密码
+          .password-popup-box-wrap
+            .box-item
+              .point
+            .box-item
+              .point
+            .box-item
+              .point
+            .box-item
+              .point
+            .box-item
+              .point
+            .box-item
+              .point
+          .password-popup-input
+            input#password-input(type='number' placeholder='')
+        .password-popup-buttons
+          span.password-popup-button.cancel 取消
+          span.password-popup-button.confirm 确定
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      var bankName = !{JSON.stringify(bankName)};
+      var userBankNo = !{JSON.stringify(userBankNo)};
+      var bankCode = !{JSON.stringify(bankCode)};
+      var branchBankName = !{JSON.stringify(branchBankName)};
+    script(type = 'text/javascript', src = '/static/js/editBankcard.js')

@@ -1,0 +1,45 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 开户
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body(class='public-openAccount-index')
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 开户
+    .content-body
+      .step-wrap
+        .step-1-wrap.step-index-wrap.active-no
+          .right-bar
+          .index-wrap 1
+          .step-content 设置交易密码
+        .step-2-wrap.step-index-wrap
+          .left-bar
+          .right-bar
+          .index-wrap 2
+          .step-content 绑定银行卡号
+        .step-3-wrap.step-index-wrap
+          .left-bar
+          .index-wrap 3
+          .step-content 添加开户信息
+      form.mui-input-group
+        .mui-input-row
+          label 姓名
+          input#userName-input(type='text', placeholder='请输入姓名')
+        .mui-input-row
+          label 身份证号码
+          input#userCard-input(type='number', placeholder='请输入身份证号码')
+        .mui-input-row
+          label 交易密码
+          input#tradePassword-input(type='password', placeholder='请输入交易密码')
+      button#next-btn.mui-btn.mui-btn-warning.center(type='button')
+        | 下一步
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript', src='/static/js/goOpenAccount.js')

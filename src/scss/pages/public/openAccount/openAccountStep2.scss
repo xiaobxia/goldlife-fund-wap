@@ -1,0 +1,43 @@
+.mui-table-view .mui-table-view-cell {
+  .placeholder {
+    display: inline-block;
+    max-width: 448px;
+    white-space: normal;
+    //overflow: hidden;
+    //text-overflow: ellipsis;
+    //white-space: nowrap;
+    line-height: 1.1;
+  }
+  .label {
+    line-height: 1.1;
+  }
+}
+
+.mui-btn-warning {
+  margin-top: 60px;
+}
+
+.step-content {
+  width: 90px;
+}
+
+.warn-icon{
+  vertical-align: middle;
+  margin-right: .5em;
+}
+
+.quick-btn{
+  &.hidden{
+    display: none;
+  }
+}
+#time-btn{
+  top: 25px;
+  background-color: $grey;
+  color: #fff;
+  height: 45px;
+  right: 35px;
+  border-radius: 20px;
+  line-height: 45px;
+  font-size: 30px;
+}

@@ -1,0 +1,107 @@
+.mui-bar-nav {
+  background-color: #fff;
+  padding: 0 0 0 30px;
+  .mui-search.mui-active:before{
+    position: static;
+    display: inline;
+    height: auto;
+    width: auto;
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 0 15px;
+    padding-top: 5px;
+    font-size: 45px;
+    color: rgb(134,134,134);
+  }
+  .mui-search {
+    margin-top: 10px;
+    height: 70px;
+    width: 610px;
+    background-color: rgb(240, 240, 245);
+    border-radius: 10px;
+    line-height: 70px;
+    input {
+      position: absolute;
+      left: 55px;
+      margin: 0;
+      height: 70px;
+      width: 550px;
+      background-color: rgb(240, 240, 245);
+      font-size: 32px;
+      @include placeholder-color($grey-text-color);
+    }
+    .mui-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 70px;
+      text-align: left;
+      .mui-icon-search{
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        height: 70px;
+        line-height: 64px;
+        width: 68px;
+        &:before{
+          padding: 0 15px;
+          font-size: 45px;
+          color: rgb(134,134,134);
+        }
+      }
+      span{
+        font-size: 32px;
+        color: $grey-text-color;
+        vertical-align: middle;
+      }
+    }
+    .mui-icon-clear{
+      top: 0;
+      padding: 0;
+      right: 20px;
+      line-height: 70px;
+      font-size: 36px;
+      height: 70px;
+      width: 70px;
+    }
+  }
+  .mui-btn {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 116px;
+    display: block;
+    font-size: 32px;
+    line-height: 90px;
+    text-align: center;
+    color: rgb(170, 170, 170);
+  }
+}
+.right{
+  float: right;
+  margin-right: 30px;
+}
+
+.history-wrap{
+  position: relative;
+  padding: 30px 24px;
+  background-color: #fff;
+  color: #000;
+  font-size: 30px;
+  &.hidden{
+    display: none;
+  }
+  .mui-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 24px;
+    height: 100%;
+    z-index: 20;
+    font-size: 30px;
+    color: rgb(170, 170, 170);
+  }
+}

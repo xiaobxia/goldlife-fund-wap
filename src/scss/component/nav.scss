@@ -1,0 +1,56 @@
+body{
+  .mui-bar-nav {
+    padding: 0 40px;
+  }
+}
+.mui-bar-nav{
+  height: 90px;
+  padding: 0 40px;
+  box-shadow: none;
+  font-size: 34px;
+  background-color: #fff;
+  border-bottom: 1px solid $grey-border-color;
+  &.yellow{
+    background-color: $main-color;
+    border-bottom: 0;
+    h1, .mui-icon{
+      color: #fff;
+    }
+    .mui-pull-right{
+      color: #fff;
+    }
+    .mui-title{
+      p{
+        color: #fff;
+      }
+    }
+  }
+  h1, .mui-icon{
+    padding: 0;
+    color: #000;
+    line-height: 90px;
+    font-weight: $main-font-weight;
+  }
+  h1{
+    font-size: 34px;
+  }
+  .mui-icon{
+    font-size: 48px;
+  }
+  .mui-pull-right{
+    position: relative;
+    z-index: 20;
+    line-height: 90px;
+    font-size: 30px;
+    font-weight: $main-font-weight;
+    color: #000;
+  }
+  .mui-title{
+    p{
+      margin: 0;
+      font-size: 32px;
+      color: #000;
+      line-height: 1.4;
+    }
+  }
+}

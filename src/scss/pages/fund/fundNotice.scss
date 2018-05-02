@@ -1,0 +1,42 @@
+
+body{
+  padding-top: 90px;
+}
+.oneLine {
+  color: black;
+  padding: 7px 0px;
+  border-bottom: 1px solid #cccccc;
+  font-size: 28px;
+  position:relative;
+}
+.publicDate{
+  display: inline-block;
+  float: left;
+  width: 193px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 21px;
+  font-size: 25px;
+  color: #929091;
+}
+.title{
+  display: inline-block;
+  float: right;
+  width: 503px;
+  padding-right: 29px;
+  color: #95796D;
+}
+.page-end{
+  display: block;
+  text-align: center;
+  color: #95796D;
+  font-size: 32px;
+}
+.clearfix:after {
+  content: '\0020';
+  display: block;
+  height: 0;
+  clear: both;
+}
+

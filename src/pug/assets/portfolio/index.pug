@@ -1,0 +1,69 @@
+doctype html
+html(lang='en').assets-portfolio-index
+  head
+    meta(charset='UTF-8')
+    title 持有组合
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 持有组合
+      a.mui-pull-right#to-records 交易记录
+    .content-body
+      .banner-info-wrap
+        h5 组合总资产（元）
+        h1(class=portfolioWorthValue==0?'':(portfolioWorthValue<0?'green-text':'red-text'))=portfolioWorthValueString
+        if inTransitAmount
+          p='买入待确认'+inTransitAmount+'元'
+        else
+          p
+        .my-detail
+          .sub-wrap
+            p.title='日收益（'+netValueDateString+'）'
+            p(class=portfolioTodayIncome==0?'':(portfolioTodayIncome<0?'green-text':'red-text'))=portfolioTodayIncomeString
+          .vertical
+          .sub-wrap
+            p.title 累计收益（元）
+            p(class=portfolioAccumIncome==0?'':(portfolioAccumIncome<0?'green-text':'red-text'))=portfolioAccumIncomeString
+      if (portfolioWorthValue!=0)
+        if inTransitNumString !== ''
+          ul.mui-table-view.transparent
+            li.mui-table-view-cell
+              a.mui-navigate-right(href='/page/assets/portfolio/records')=inTransitNumString
+        ul.mui-table-view.portfolio-list
+          each portfolio in portfolios
+            a(href='/page/assets/portfolio/position?portfolioCode='+portfolio.portfolioCode)
+              li.mui-table-view-cell
+                .title=portfolio.protocolName
+                  span.tag-yellow 组合
+                  if portfolio.stockUp == 1
+                    span.tag-blue 调仓
+                  else if portfolio.stockUp == 2
+                    span.tag-blue 调仓中
+                .detail
+                  .sub-wrap.left
+                    p.title 资产(元)
+                    p=portfolio.portfolioWorthValueString
+                  .sub-wrap
+                    p.title='日收益(' + portfolio.netValueDateString + ')'
+                    p(class=!portfolio.portfolioTodayIncome?'':(portfolio.portfolioTodayIncome < 0 ? 'green-text' : 'red-text'))=portfolio.portfolioTodayIncomeString
+                  .sub-wrap
+                    p.title 累计收益(元)
+                    p(class=!portfolio.portfolioAccumIncome?'':(portfolio.portfolioAccumIncome < 0 ? 'green-text' : 'red-text'))=portfolio.accumIncomeString || '0.00'
+                if portfolio.sellInTransit
+                  .other
+                    span.warn-icon i
+                    span=portfolio.sellInTransitString
+        .company-warn
+          p 基金销售服务由杭州科地瑞富基金销售有限公司提供
+          p 基金历史业绩不预示未来表现，市场有风险，投资需谨慎
+      else
+        .novalue
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript', src='/static/js/portfolioAssets.js')

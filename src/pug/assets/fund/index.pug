@@ -1,0 +1,67 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 持有基金
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.assets-fund-index
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 持有基金
+      a.mui-pull-right.link-a#to-records 交易记录
+    .content-body
+      .banner-info-wrap
+        h5 总资产(元)
+        h1(class=totalWorthValue==0?'':(totalWorthValue<0?'green-text':'red-text'))=totalWorthValueString
+        p=totalInTransitString?totalInTransitString: ''
+        .my-detail
+          .sub-wrap
+            p.title='日收益('+netValueDateString+')'
+            p(class=totalTodayIncome==0?'':(totalTodayIncome<0?'green-text':'red-text'))=totalTodayIncomeString
+          .vertical
+          .sub-wrap
+            p.title 累计收益
+            p(class=totalAccumIncome==0?'':(totalAccumIncome<0?'green-text':'red-text'))=totalAccumIncomeString
+      if (totalWorthValue !=0)
+        if totalNumInTransit != 0
+          ul.mui-table-view.transparent
+            li.mui-table-view-cell
+              a.mui-navigate-right(href='/page/assets/fund/records')='有'+totalNumInTransit+'笔买入确认中'
+        else
+          .white-wrap
+        ul.mui-table-view.portfolio-list#recordList
+          //- each share in shares
+          //-   a(href='/page/assets/fund/assetDetail')
+          //-     li.mui-table-view-cell
+          //-       .title=share.fundName
+          //-         span=share.fundCode
+          //-       .detail
+          //-         .sub-wrap.left
+          //-           p.title 总资产
+          //-           p=share.worthValueString
+          //-         .sub-wrap
+          //-           p.title='日收益('+share.netValueDateString+')'
+          //-           p(class=share.todayIncome<0?'green-text':'red-text')=share.todayIncomeString
+          //-         .sub-wrap
+          //-           p.title 累计收益
+          //-           p(class=share.accumIncome<0?'green-text':'red-text')=share.accumIncomeString
+        div.page-end#page-end-record=shares.length<10?"没有更多数据了" : "↑ 继续加载更多数据"
+      else
+        .novalue
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      //上次加载数据数量
+      var fShares = !{JSON.stringify(shares)};
+      var lastRecordListSize = #{shares.length};
+      //var lastRecordListSize = 0;
+      var beginNumRecord = 1;
+      beginNumRecord += lastRecordListSize;
+    script(type='text/javascript', src='/static/js/fundAssets.js')
+
+

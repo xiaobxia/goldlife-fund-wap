@@ -1,0 +1,101 @@
+.detail-card-wrap {
+  position: relative;
+  width: 690px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  &.yellow {
+    background-color: rgb(255, 220, 152);
+    .circle {
+      background-color: rgb(255, 170, 0);
+    }
+  }
+  &.red {
+    background-color: rgb(255, 200, 196);
+    .circle {
+      background-color: rgb(248, 125, 117);
+    }
+  }
+  &.blue {
+    background-color: rgb(208, 225, 255);
+    .circle {
+      background-color: rgb(160, 190, 244);
+    }
+  }
+  .detail-card {
+    position: absolute;
+    top: -2px;
+    left: -12px;
+    width: 690px;
+    height: 204px;
+    border-radius: 12px;
+    background-color: #fff;
+    .circle {
+      position: absolute;
+      left: -100px;
+      height: 200px;
+      width: 200px;
+      border-radius: 200px;
+      .title {
+        position: absolute;
+        left: 130px;
+        width: 40px;
+        height: 100%;
+        font-size: 36px;
+        color: #fff;
+        &.two-text {
+          line-height: 60px;
+          padding: 40px 0;
+        }
+        &.three-text {
+          line-height: 40px;
+          padding: 40px 0;
+        }
+      }
+    }
+    .center{
+      position: absolute;
+      left: 100px;
+      padding: 55px 0 40px 0;
+      height: 100%;
+      width: 280px;
+      text-align: center;
+      p{
+        max-width: 260px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+     .title{
+       font-size: 32px;
+       color: $main-text-color;
+      }
+      .value{
+        font-size: 40px;
+      }
+    }
+    .right{
+      position: absolute;
+      left: 380px;
+      padding: 55px 0 40px 0;
+      height: 100%;
+      width: 250px;
+      p{
+       font-size: 32px;
+        .now{
+          color: $brown-text-color;
+        }
+        .last{
+          color: $main-text-color;
+        }
+        .value{
+          max-width: 100px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          float: right;
+        }
+      }
+    }
+  }
+}

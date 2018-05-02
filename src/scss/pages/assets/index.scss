@@ -1,0 +1,88 @@
+.my-detail-info-wrap {
+  padding: 50px 0 45px 0;
+  background-color: $main-color;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  background-image: url("/static/asset/bk.png");
+  background-size: contain;
+  h5 {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+  }
+  h1 {
+    margin: 28px 0;
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+    font-weight: $main-font-weight;
+  }
+  p {
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    min-height: 36px;
+  }
+  .my-detail {
+    position: relative;
+    margin-top: 20px;
+    height: 80px;
+    .sub-wrap {
+      display: inline-block;
+      width: 48%;
+      p {
+        color: #fff;
+        font-size: 28px;
+        text-align: center;
+      }
+    }
+    .vertical {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0 auto;
+      height: 100%;
+      width: 1px;
+      background-color: #fff;
+    }
+  }
+}
+
+.detail-wrap {
+  margin-top: 20px;
+  padding: 0 30px;
+  .detail-card-wrap {
+    margin-bottom: 20px;
+  }
+}
+
+.mui-table-view {
+  margin-top: 20px;
+  &.list {
+    .mui-table-view-cell {
+      padding: 25px 0;
+      height: 130px;
+    }
+    .explain{
+      font-size: 26px;
+      color: $grey-text-color;
+      line-height: 1.1;
+    }
+    .right{
+      float: right;
+      margin-right: 60px;
+    }
+  }
+}
+
+.mui-table-view a:last-child{
+  .mui-table-view-cell{
+    border-bottom: none;
+  }
+}
+
+.mui-table-view a .mui-table-view-cell {
+  border-bottom: 1px solid #cccccc;
+}

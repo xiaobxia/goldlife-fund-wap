@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 居住地址
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.picker.all.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/addressCode.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.public-openAccount-getAddr
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 居住地址
+    .content-body.with-top
+      ul.mui-table-view
+        li.mui-table-view-cell#province-btn
+          a.mui-navigate-right
+            span.label 所在省份
+            span.placeholder#province-text
+            span.value 请选择
+        li.mui-table-view-cell#city-btn
+          a.mui-navigate-right
+            span.label 所在城市
+            span.placeholder#city-text
+            span.value 请选择
+        li.mui-table-view-cell#range-btn
+          a.mui-navigate-right
+            span.label 所在地区
+            span.placeholder#range-text
+            span.value 请选择
+      button#next-btn.mui-btn.mui-btn-warning.center(type='button')
+        | 确定
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript', src='/static/lib/mui.picker.all.js')
+    script(type='text/javascript', src='/static/js/getAddr.js')

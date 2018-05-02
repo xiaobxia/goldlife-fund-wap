@@ -1,0 +1,32 @@
+.mui-table-view{
+  padding-left: 0;
+  .mui-table-view-cell{
+    padding: 25px 45px;
+    font-size: 32px;
+    height: 90px;
+    border-top: 1px solid $grey-border-color;
+    color: $brown-text-color;
+    .left{
+      line-height: 1.1;
+      float: left;
+      width: 30%;
+      text-align: left;
+    }
+    .right{
+      float: right;
+      width: 70%;
+      text-align: right;
+      line-height: 1.1;
+    }
+  }
+}
+
+.mui-btn-warning{
+  margin-top: 64px;
+}
+
+
+.other-text{
+  padding: 25px 35px;
+  text-align: center;
+}

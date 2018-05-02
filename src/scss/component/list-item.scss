@@ -1,0 +1,207 @@
+.mui-table-view{
+  background-color: #fff;
+  padding: 0;
+  padding-left: 30px;
+  border: none;
+  font-family: 'Microsoft Yahei';
+  &.top-border {
+    border-top: 1px solid $grey-border-color;
+  }
+  &:before{
+    height: 0;
+  }
+  &:after{
+    height: 0;
+  }
+  &.inside-both{
+    .mui-table-view-cell {
+      &:first-child{
+        border-top: 1px solid $grey-border-color;
+      }
+      &:last-child{
+        border-bottom: 1px solid $grey-border-color;
+      }
+    }
+  }
+  &.inside-top{
+    .mui-table-view-cell {
+      &:first-child{
+        border-top: 1px solid $grey-border-color;
+      }
+    }
+  }
+  &.inside-bottom{
+    .mui-table-view-cell {
+      &:last-child{
+        border-bottom: 1px solid $grey-border-color;
+      }
+    }
+  }
+  .mui-table-view-cell>a:not(.mui-btn){
+    padding: 0;
+    margin: 0;
+    &.mui-active{
+      background-color: transparent;
+    }
+  }
+  .mui-table-view-cell{
+    height: 95px;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid $grey-border-color;
+    line-height: 95px;
+    &.mui-active{
+      background-color: transparent;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+    &:after{
+      height: 0;
+    }
+    .mui-navigate-right{
+      display: inline-block;
+      width: 100%;
+      font-size: 30px;
+      font-family: 'Microsoft Yahei';
+      line-height: 1.1;
+      vertical-align: middle;
+    }
+    .label{
+      display: inline-block;
+      padding: 0;
+      font-size: 30px;
+      width: 236px;
+      color: $brown-text-color;
+      span{
+        margin-left: 1em;
+      }
+      &.no-width{
+        width: auto;
+      }
+    }
+    .quick-btn{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 35px!important;
+      height: 100%;
+      font-size: 30px;
+      color: rgb(0,193,255);
+      &.normal{
+        color: $main-text-color
+      }
+    }
+    .placeholder{
+      display: inline;
+      color: $grey-text-color;
+      font-size: 28px;
+      &.brown{
+        color: $brown-text-color;
+        font-size: 30px;
+      }
+    }
+    .value{
+      float: right;
+      display: inline-block;
+      margin-right: 60px;
+      color: $grey-text-color;
+      max-width: 380px;
+      font-size: 26px;
+      white-space: normal;
+      //max-height: 95px;
+      //overflow: hidden;
+      //text-overflow:ellipsis;
+      //white-space: nowrap;
+    }
+    .explain{
+      font-size: 20px;
+      color: $main-text-color;
+      line-height: 1.1;
+    }
+    .title {
+      font-size: 32px;
+      color: $brown-text-color;
+      line-height: 1.1;
+      margin-bottom: 15px;
+      .tag-yellow, .tag-blue {
+        margin-left: 30px;
+        font-size: 26px;
+        padding: 2px 8px;
+        border-radius: 6px;
+      }
+      .tag-yellow {
+        border: 1px solid $yellow;
+        color: $yellow;
+      }
+      .tag-blue {
+        border: 1px solid rgb(160, 190, 244);
+        color: rgb(160, 190, 244);
+      }
+      .rate{
+        float: right;
+      }
+    }
+  }
+
+  &.large{
+    .mui-table-view-cell {
+      padding: 30px 0;
+      height: 130px;
+      border: none;
+      border-bottom: 1px solid $grey-border-color;
+      line-height: 70px;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:after {
+        height: 0;
+      }
+    }
+  }
+}
+
+.mui-table-view {
+  &.transparent {
+    background-color: transparent;
+    .mui-table-view-cell {
+      height: 60px;
+      line-height: 60px;
+      .mui-navigate-right {
+        color: $main-text-color;
+      }
+    }
+  }
+
+  &.portfolio-list {
+    margin-top: 20px;
+    .mui-table-view-cell {
+      padding: 25px 25px 25px 0;
+      height: 190px;
+      line-height: 1;
+      .title {
+        margin-bottom: 40px;
+      }
+      .detail {
+        position: relative;
+        .sub-wrap {
+          display: inline-block;
+          width: 32%;
+          text-align: right;
+          &.left {
+            text-align: left;
+          }
+          p {
+            color: $brown-text-color;
+            font-size: 28px;
+          }
+          .title {
+            margin-bottom: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+

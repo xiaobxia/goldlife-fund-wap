@@ -1,0 +1,92 @@
+.step-wrap {
+  padding: 60px 0 30px 0;
+  height: 260px;
+  background-color: #fff;
+  text-align: center;
+  letter-spacing: -8px;
+  .step-index-wrap {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+    height: 100%;
+    text-align: center;
+    letter-spacing: 0;
+    vertical-align: middle;
+    &.active-no{
+      .index-wrap{
+        background-color: $main-color;
+      }
+    }
+    &.active-left{
+      .left-bar {
+        background-color: $main-color;
+      }
+      .index-wrap{
+        background-color: $main-color;
+      }
+    }
+    &.active-right{
+      .right-bar {
+        background-color: $main-color;
+      }
+      .index-wrap{
+        background-color: $main-color;
+      }
+    }
+    &.active-both{
+      .left-bar, .right-bar {
+        background-color: $main-color;
+      }
+      .index-wrap{
+        background-color: $main-color;
+      }
+    }
+    .left-bar, .right-bar {
+      position: absolute;
+      top: 31px;
+      height: 8px;
+      width: 70px;
+      background-color: $grey-background-color;
+    }
+    .left-bar {
+      border-radius: 0 8px 8px 0;
+      left: 0;
+    }
+    .right-bar {
+      border-radius:  8px 0 0 8px;
+      right: 0;
+    }
+    .index-wrap {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      border-radius: 80px;
+      line-height: 80px;
+      text-align: center;
+      color: #fff;
+      font-size: 40px;
+      background-color: $grey-background-color;
+      .mui-icon{
+        font-size: 80px;
+      }
+    }
+    .step-content{
+      position: relative;
+      margin: 25px auto 0 auto;
+      font-size: 28px;
+      color: $brown-text-color;
+    }
+  }
+}
+.step-2{
+  .step-index-wrap {
+    width: 374px;
+    .left-bar, .right-bar {
+      position: absolute;
+      top: 35px;
+      height: 6px;
+      width: 150px;
+      background-color: $grey-background-color;
+    }
+  }
+}

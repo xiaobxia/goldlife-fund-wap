@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 选择支行
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.public-selectSubBranch-index
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 选择支行
+    .content-body
+      .mui-input-row.mui-search
+        button#cancel-btn 取消
+        input#search-input.mui-input-clear(type='search', placeholder='请输入开户支行名称')
+      ul.mui-table-view.transparent
+        li#now-position.mui-table-view-cell=position
+      ul#list-body.mui-table-view
+        each listItem in listData
+          if listType == 'nav'
+            a(href='/page/public/selectSubBranch?'+listItem.url)
+              li.mui-table-view-cell(class=listType)=listItem.text
+                span.mui-navigate-right
+          else
+            li.mui-table-view-cell(class=listType data-vcBankname=listItem.vcBankname data-vcBranchbank=listItem.vcBranchbank)=listItem.vcBankname
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript', src='/static/js/selectSubBranch.js')

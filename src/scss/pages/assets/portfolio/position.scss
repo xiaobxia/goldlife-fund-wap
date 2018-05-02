@@ -1,0 +1,49 @@
+.position-wrap {
+  position: fixed;
+  bottom: 100px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 0 0 0;
+
+  text-align: center;
+  .title {
+    font-size: 26px;
+    color: $main-text-color;
+    font-weight: $main-font-weight;
+  }
+  a {
+    display: block;
+    padding: 25px 0;
+    font-size: 28px;
+    color: rgb(0, 190, 250);
+  }
+}
+.other{
+  padding-left: 35px;
+}
+.mui-table-view.transparent{
+  .mui-table-view-cell{
+    height: 55px;
+    line-height: 55px;
+  }
+}
+
+.mui-table-view.portfolio-list{
+  margin-top: 0;
+  .detail{
+    .sub-wrap{
+      p{
+        color: $main-text-color;
+      }
+      .title{
+        color: $brown-text-color-light;
+      }
+    }
+  }
+}
+.company-warn{
+  margin-top: 50px;
+}
+.content-body{
+  margin-bottom: 200px;
+}

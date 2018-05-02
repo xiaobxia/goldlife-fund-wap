@@ -1,0 +1,48 @@
+.portfolio-list{
+  a{
+    .mui-table-view-cell{
+      border-bottom: 1px solid $grey-border-color;
+    }
+    &:last-child{
+      .mui-table-view-cell{
+        border-bottom: 0;
+      }
+    }
+  }
+  .mui-table-view-cell{
+    height: auto;
+    .title{
+      span{
+        margin-left: 2em;
+      }
+    }
+  }
+}
+.sub-wrap{
+  .title{
+    color: $brown-text-color-light!important;
+  }
+}
+.mui-table-view.portfolio-list .mui-table-view-cell .detail .sub-wrap p{
+  color: $main-text-color;
+}
+.mui-table-view.portfolio-list{
+  margin: 0;
+}
+.other{
+  .warn-icon{
+    margin-right: .5em;
+  }
+  font-size: 24px;
+  margin-top: 15px;
+  color: $main-text-color;
+  background-color: #fff;
+}
+
+.novalue{
+  background: url("/static/asset/novalue.jpg")no-repeat;
+  width: 750px;
+  height: 570px;
+  -webkit-background-size: cover;
+  background-size: cover;
+}

@@ -1,0 +1,25 @@
+.mui-btn-warning{
+  margin-top: 150px;
+}
+.mui-input-row{
+  &.border{
+    border-top: 1px solid $grey-border-color;
+  }
+}
+.mui-table-view-cell{
+  &.border{
+    border-top: 1px solid $grey-border-color;
+  }
+}
+
+.other{
+  .warn-icon{
+    margin-right: .5em
+  }
+  padding: 20px 35px;
+  font-size: 24px;
+}
+
+.company-warn{
+  margin-top: 380px;
+}

@@ -1,0 +1,46 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/vue.min.js')
+    script(type='text/javascript', src='/static/lib/jquery-3.1.0.min.js')
+    title 风险评测
+    script(type='text/javascript').
+      setAdaptive();
+  body.user-assessRisk
+    header#header.mui-bar.mui-bar-nav
+      a#back.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 风险评测
+    .content-body
+      #QUESTION.title_div.base_div
+        .title_div_inner
+          .progress(style='margin-bottom: 0;')
+            .progress-bar(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 5%;background: #ffaa00 linear-gradient(to bottom, #ffaa00 0%, #ffaa00 100%);')
+              span.sr-only 60% Complete
+        .title_div_inner(style='display: none;')
+          span {{question.question_content}}
+      #SECTION(style='display: none;')
+        .section_div.base_div(v-for='section in sections', v-on:click='J_next', data-option-no='{{section.option_no}}')
+          div
+            img(width='{{section.width}}', src='{{section.img}}' style='margin-right:10px')
+            span {{section.option_content}}
+      #cp-cf-wp.complete-confirm-wrap
+        .confirm-check-wrap
+          #confirm-check-mask
+            input#confirm-check(type='checkbox', hidden='true')
+          label(for='confirm-check')
+            | 确认测评回答均为本人真实意愿表达
+        #cf-cp-btn.codi_button_inner.disabled 完成
+      #last-button.codi_button
+        .J_pre.codi_button_inner 上一题
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      var answer_object = !{JSON.stringify(answer_object)};
+      console.log(answer_object)
+
+    script(type = 'text/javascript', src = '/static/js/assessRisk.js').

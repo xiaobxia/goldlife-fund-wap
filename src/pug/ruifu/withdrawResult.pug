@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 申请结果
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.ruifu-withdrawResult
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 申请结果
+    .content-body
+        .banner
+          span.mui-icon.mui-icon-checkmarkempty
+          .title 申请提现成功
+          if type=='normal'
+            .explain 资金预计3~5个工作日内到账
+          else
+            .explain 资金预计2小时内到账
+        a(href="/page/assets/ruifubao/records")#next-btn.mui-btn.mui-btn-warning.center(type='button') 完成
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript' src='/static/js/ruifubaoWithdrawResult.js')

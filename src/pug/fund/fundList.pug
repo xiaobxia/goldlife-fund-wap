@@ -1,0 +1,64 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/vue.min.js')
+    title 基金排名
+    script(type='text/javascript').
+      setAdaptive();
+  body.fund-fundList
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 基金排名
+      a.mui-pull-right.link-a(href='/page/public/search') 搜索
+    .content-body
+      table(class='table1')
+        tr.fund_type
+          td.selected(v-fund-type='0') 全部
+          td(v-fund-type='1101') 股票
+          td(v-fund-type='910000') 指数
+          td(v-fund-type='1105') 债券
+          td(v-fund-type='1103') 混合
+          td(v-fund-type='1109') 货币
+      div(class='table1_div')
+      // 基金列表
+      table.fund_list(cellspacing='0')
+        colgroup
+          col(width='50%')
+          col(width='25%')
+          col(width='25%')
+        thead(style='color: #B4A19B;')
+          tr
+            th
+              .border-right(style='text-align: left; padding-left:20px') 名称
+            th
+              .border-right.J_valueName 最新净值
+            th.J_sort
+              span.J_rateName 日涨幅
+              span.sort-icon(v-sort-value='1') ▼
+        tbody#fund_detail
+          tr(v-for='fundDetail in fundList', v-on:click='clickone(fundDetail)')
+            // onclick="loadURL_btn('codi://fundDetail?fundCode={{fundDetail.fundCode}}&fundName={{fundDetail.fundName}}');">
+            td.font16.toLeft(style='padding-left: 15px;')
+              .border-right
+                p {{fundDetail.fundNameAbbr}}
+                p {{fundDetail.fundCode}}
+            td.font16
+              .border-right.toLeft(style='padding-left: 20px')
+                p {{fundDetail.value}}
+                p {{fundDetail.tradingDay}}
+            td(class='{{fundDetail.color}}') {{fundDetail.rate}}
+              tr(style='width: 100%')
+                td(colspan='3')
+                  span.page-end  ↑ 继续加载更多数据
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      var headers = !{JSON.stringify(headers)};
+      console.log(headers)
+
+    script(type = 'text/javascript', src = '/static/js/fundList.js')

@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Title
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 导航栏
+    .content-body
+      h3 按钮
+      button.mui-btn.mui-btn-warning(type='button')
+        | 登录
+      h3 输入框
+      .mui-input-group
+        .mui-input-row
+          label 账号
+          input(type='number', placeholder='普通输入框' id="inp-1")
+    h3 列表
+    ul.mui-table-view
+      li.mui-table-view-cell
+        a.mui-navigate-right
+          | Item 1
+      li.mui-table-view-cell
+        a.mui-navigate-right
+          | Item 2
+      li.mui-table-view-cell
+        a.mui-navigate-right
+          | Item 3
+    h5 大号
+    ul.mui-table-view.large
+      li.mui-table-view-cell Item 1
+      li.mui-table-view-cell Item 2
+      li.mui-table-view-cell Item 3
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript', src='/static/js/component.js')

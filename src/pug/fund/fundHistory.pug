@@ -1,0 +1,39 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+
+    title 历史记录
+    script(type='text/javascript').
+      setAdaptive();
+  body.fund-fundHistory
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 历史记录
+    .content-body
+      .profit_list
+      .page-end
+      //div
+      //  .oneLine_title
+      //    .span_title_3 日期
+      //    .span_title_3 单位净值
+      //    .span_title_3 日增涨率
+      //  .oneLine
+      //    .span_con_3 17-11-28
+      //    .span_con_3 1.0990
+      //    .span_con_3(style='color:red') 3.87%
+      //  .oneLine
+      //    .span_con_3 17-11-28
+      //    .span_con_3 1.0990
+      //    .span_con_3(style='color:red') 3.87%
+      //  .oneLine
+      //    .span_con_3 17-11-28
+      //    .span_con_3 1.0990
+      //    .span_con_3(style='color:red') 3.87%
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type = 'text/javascript', src = '/static/js/fundHistory.js').

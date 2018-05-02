@@ -1,0 +1,32 @@
+.mui-toast-container{
+  bottom: 300px;
+  .mui-toast-message{
+    padding: 30px;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 10px;
+    line-height: 1.1;
+  }
+}
+
+.my-toast-container{
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  top:50%;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  transform: translate(-50%,-50%);
+  opacity: 0.8;
+  width: 240px;
+  .mui-toast-message{
+    padding: 60px 0;
+    border-radius: 30px;
+  }
+  .mui-spinner{
+    width: 120px;
+    height: 120px;
+    font-size: 120px;
+  }
+}
+

@@ -1,0 +1,41 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    title 瑞富宝
+    script(type='text/javascript').
+      setAdaptive();
+  body.ruifu-ruifuList
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 瑞富宝
+    .content-body
+      .main
+        each ruifu in ruifuList
+          .fundPortfollo(onclick='openurl("'+ruifu.fundCode+''+'")')
+            .fundPortfollo_l
+              ul
+                li=ruifu.latestWeeklyYieldStr
+                  a(href='javascript:void(0)') %
+                li 七日年化
+            .fundPortfollo_r
+              ul
+                li= ruifu.fundName
+                if ruifu.minvalue
+                  li= ruifu.minvalue+'元起购实时取现'
+                else
+                  li= '不限额'
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      var ruifuList = !{JSON.stringify(ruifuList)};
+      console.log(ruifuList)
+      function openurl(data) {
+        localStorage.setItem('sourceToMonetaryDetail', window.location.pathname + window.location.search);
+        window.location = '/page/ruifu/monetaryDetail?fundCode='+data
+      }
+    script(type='text/javascript' src='/static/js/ruifuList.js')

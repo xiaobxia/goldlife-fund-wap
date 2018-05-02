@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    title 基金经理
+    script(type='text/javascript').
+      setAdaptive();
+  body.fund-fundManagerTransfer
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 基金经理
+    .content-body
+      .fundManagerTransfer()
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      var fundDetail = !{JSON.stringify(fundDetail)};
+      console.log(fundDetail)
+      function loadURL(data) {
+        window.location =  data
+      }
+    script(type = 'text/javascript', src = '/static/js/fundManagerTransfer.js')

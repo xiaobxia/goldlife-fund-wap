@@ -1,0 +1,71 @@
+.mui-input-group{
+  background-color: #fff;
+  padding: 0;
+  padding-left: 30px;
+  border: none;
+  font-family: 'Microsoft Yahei';
+  &:before{
+    height: 0;
+  }
+  &:after{
+    height: 0;
+  }
+  .mui-input-row{
+    position: relative;
+    height: 95px;
+    border: none;
+    border-bottom: 1px solid $grey-border-color;
+    line-height: 95px;
+    &:last-child{
+      border-bottom: none;
+    }
+    &:after{
+      height: 0;
+    }
+    label{
+      float: none;
+      display: inline-block;
+      width: 236px;
+      padding: 0;
+      font-size: 30px;
+      color: $brown-text-color;
+      font-family: 'Microsoft Yahei';
+      span{
+        margin-left: 1em;
+      }
+      &.no-width{
+        width: auto;
+      }
+    }
+    input{
+      float: none;
+      display: inline-block;
+      width: 450px;
+      font-size: 28px;
+      height: 56px;
+      line-height: 56px;
+      @include placeholder-color($grey-text-color);
+      &::-webkit-input-placeholder {
+        line-height: 30px;
+      }
+      &:-moz-placeholder {
+        line-height: 30px;
+      }
+      &:-ms-input-placeholder {
+        line-height: 30px;
+      }
+    }
+    .quick-btn{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 35px!important;
+      height: 100%;
+      font-size: 30px;
+      color: rgb(0,193,255);
+      &.normal{
+        color: $main-text-color
+      }
+    }
+  }
+}

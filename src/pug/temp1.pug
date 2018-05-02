@@ -1,0 +1,72 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 陈灵捷
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+    style(type='text/css').
+      body {
+        background-color: #999;
+      }
+
+      .block-item {
+        margin: 10px 0;
+      }
+
+      .block-item a {
+        display: block;
+        padding: 15px 0;
+        color: #fff;
+        background-color: #555;
+        text-align: center;
+        text-decoration: none;
+      }
+  body
+    .block-item
+      a(href='/fund/getComponent') 组件
+    .block-item
+      a(href='/page/public/search') 搜索
+    .block-item
+      a(href='/page/public/quotas') 限额说明
+    .block-item
+      a(href='/page/public/selectSubBranch?bankName=工商银行') 选择支行
+    .block-item
+      a(href='/page/public/openAccount') 实名认证&绑卡
+    .block-item
+      a(href='/page/assets') 资产
+    .block-item
+      a(href='/page/assets/fund/assetDetail') 基金资产
+    .block-item
+      a(href='/page/assets/portfolio/position?portfolioCode=3042') 组合资产持有详情
+    .block-item
+      a(href='/page/assets/fund/redeem?fundCode=200008&fundName=长城品牌优选混合') 基金赎回
+    .block-item
+      a(href='/page/assets/portfolio/redeem') 组合赎回
+    .block-item
+      a(href='/page/assets/fund/selectDividend') 分红方式修改
+    .block-item
+      a(href='/page/ruifu/ruifuBuy?fundCode=200003&fundName=长城货币A') 瑞富宝购买
+    .block-item
+      a(href='/page/fund/fundBuy?fundCode=200008&fundName=长城品牌优选混合') 基金购买
+    .block-item
+      a(href='/page/ruifu/withdraw?fundCode=200003') 瑞富宝提现
+    .block-item
+      a(href='/page/ruifu/withdrawResult') 瑞富宝提现结果
+    .block-item
+      a(href='/page/user/manageIndex?redirectType=index&channelCode=9001&phone=18966665555&userId=k1be3d41x9fe&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHQiOjE1MjM0Mjc3NzU1NDQsInVpZCI6ImsxYmUzZDQxeDlmZSIsImlhdCI6MTUyMjEzMTc3NTU0NH0.mebgQeAbPDYm22b55mVgjqYGdwHSuo86FvoaOwIrDPU') 首页
+    .block-item
+      a(href='/page/user/manageIndex?redirectType=index&channelCode=9001&phone=17700000031&userId=drx12zrenfm4&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHQiOjE1MjM1MTgyNjAxODIsInVpZCI6ImRyeDEyenJlbmZtNCIsImlhdCI6MTUyMjIyMjI2MDE4Mn0.PN4uOC90wWJpg4VJzwQuPw7Ww0f5z-3OAwkTva_I3rw') 首页2
+    .block-item
+      a(href='/page/user/manageIndex?redirectType=index&channelCode=9001&phone=17800000014&userId=v38tqs1wsy96&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHQiOjE1MjQxMDUxMzcwMjksInVpZCI6InYzOHRxczF3c3k5NiIsImlhdCI6MTUyMjgwOTEzNzAyOX0.iYjBAYY7zMd-oJ6eALUBhh8GO7M9dmS5b4TbcBBrVJ4') 首页3
+    .block-item
+      a(href='/page/user/manageIndex?channelCode=9001&phone=17681824125&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHQiOjE1MjQ4ODU3NTA5ODUsInVpZCI6Inphc2hwbXI3dWEiLCJpYXQiOjE1MjM1ODk3NTA5ODV9.6Wgcwh5RooF9s1Aq_OicbR_q_gXaM3kn_e3mFWj4i34&userId=zashpmr7ua&redirectType=index') 我的首页
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      var queryString = getQueryStringArgs();
+      console.log(queryString.banner === 'true')

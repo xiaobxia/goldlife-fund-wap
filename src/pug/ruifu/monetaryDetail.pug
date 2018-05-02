@@ -1,0 +1,61 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/echarts.min.js')
+    title 瑞富宝
+    script(type='text/javascript').
+      setAdaptive();
+  body.ruifu-monetaryDetail
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title= monetaryDetail.fundName
+      a.mui-pull-right.link-a#to-records 交易记录
+    .content-body
+      .fundPart_1
+        div= '昨日收益('+monetaryDetail.netValueDateString+')'
+        div= monetaryDetail.todayIncome
+        div= '总金额'+ monetaryDetail.walletMoney+'元'
+      .fundPart_2
+        div
+          div 累计收益(元)
+          div= monetaryDetail.totalIncome
+        div
+          div 万份收益(元)
+          div= monetaryDetail.dailyProfit
+        div
+          div 七日年化(%)
+          div= monetaryDetail.latestWeeklyYield
+      .fundPart_3
+        div
+          div 快捷
+          div 实时到账
+        div
+          div 随时
+          div 7X24小时
+        div
+          div 安全
+          div 资金安全有保障
+      #charts
+      .fundPart_4
+        div 产品详情
+        div
+      .bum_btn
+        div#buy_withdraw 提现
+        div#buy_btn 买入
+  script(type='text/javascript', src='/static/js/commonBody.js')
+  script(type='text/javascript').
+    var monetaryDetail = !{JSON.stringify(monetaryDetail)};
+    console.log(monetaryDetail)
+    $(function () {
+      $('.fundPart_4').on('click',function () {
+        localStorage.setItem('sourceToFundDetail', window.location.pathname + window.location.search)
+        window.location = '/page/fund/fundDetail?fundCode='+monetaryDetail.fundCode
+      })
+    })
+  script(type = 'text/javascript', src = '/static/js/monetaryDetail.js').

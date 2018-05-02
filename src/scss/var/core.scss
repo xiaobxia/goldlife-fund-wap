@@ -1,0 +1,160 @@
+@import "../reset/prefixes";
+
+body {
+  position: relative;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+  background-color: $body-color;
+  line-height: 1.2;
+  font-size: 28px;
+  font-weight: $main-font-weight;
+  font-family: 'Microsoft Yahei';
+  color: $main-text-color;
+  min-height: 96vh;
+  &.white {
+    background-color: #fff;
+  }
+}
+
+.content-body {
+  padding: 90px 0 0 0;
+  background-color: $body-color;
+  &.has-bar {
+    margin-bottom: 100px;
+  }
+  &.with-top {
+    padding: 110px 0 0 0;
+  }
+}
+
+.page-end {
+  padding: 30px 30px;
+  text-align: center;
+  font-size: 30px;
+  color: $brown-text-color;
+  &.no-data {
+    background-color: #fff;
+    color: $grey-text-color;
+  }
+}
+
+.hint-block {
+  background-color: transparent;
+  height: 66px;
+  font-size: 22px;
+  padding-left: 30px;
+  line-height: 66px;
+}
+
+.explain-text {
+  font-size: 24px;
+}
+
+.content-wrap {
+  margin: 46px 32px;
+}
+
+.content-wrap-left {
+  margin-left: 32px;
+}
+
+.content-wrap-h {
+  margin: 0 32px;
+}
+
+.divider-horizontal {
+  width: 100%;
+  height: 1px;
+  background-color: $grey;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 100%;
+  background-color: $grey;
+}
+
+.green-text {
+  color: $green-text-color !important;
+}
+
+.red-text {
+  color: $red-text-color !important;
+}
+
+.brown-text {
+  color: $brown-text-color !important;
+}
+
+.grey-text {
+  color: $grey-text-color !important;
+}
+
+.no-bottom {
+  margin-bottom: 0 !important;
+}
+
+a {
+  color: #000;
+}
+
+.block-like {
+  display: block !important;
+}
+
+.btn-a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  &.disabled {
+    background-color: $grey-background-color !important;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.warn-icon {
+  display: inline-block;
+  color: #fff;
+  background-color: rgb(0, 192, 255);
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 24px;
+  vertical-align: bottom;
+  font-size: 20px;
+  &.white {
+    color: $main-text-color;
+    background-color: transparent;
+    border: 1px solid $main-text-color;
+  }
+}
+
+.error-body {
+  img {
+    position: relative;
+    margin: 80px auto;
+    width: 300px;
+    display: block;
+  }
+  .error-text {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(150, 150, 150);
+  }
+}
+
+.white-wrap {
+  height: 20px;
+}
+
+#__vconsole .vc-switch {
+  bottom: 200px !important;
+}

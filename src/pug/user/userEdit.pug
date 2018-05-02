@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    title 账户设置
+    script(type='text/javascript').
+      setAdaptive();
+  body.user-userEdit
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 账户设置
+    .content-body
+      .main
+        .zhxx
+          div 修改账户信息
+          span
+        .jymm
+          div 修改交易密码
+          span
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      $('.zhxx').on('click',function () {
+        window.location='/page/user/messageEdit'
+      })
+
+      $('.jymm').on('click', function () {
+        window.location='/page/user/transactionEdit_step1'
+      })

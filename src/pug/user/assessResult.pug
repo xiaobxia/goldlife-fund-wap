@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    title 风险评测结果
+    script(type='text/javascript').
+      setAdaptive();
+  body.user-assessResult
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 风险评测结果
+      a#assessagain.mui-pull-right.link-a 重测
+    .content-body
+      #container.base_div
+        .inner#font1
+          | 您的基金风险承受能力为
+        #expire-date
+        .inner#font3
+        .inner#font4
+      .codi_button
+        .codi_button_inner 完成
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type = 'text/javascript', src = '/static/js/assessResult.js').

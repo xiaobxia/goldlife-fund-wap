@@ -1,0 +1,81 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    title 我的账户
+    script(type='text/javascript').
+      setAdaptive();
+  body.user-mine
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 我的
+    .content-body
+      .my_top
+        .my_top_t
+          div 总资产(元)
+          div=mine.totalWorthValueString
+        .my_top_b
+          .my_top_l
+            div 昨日收益(元)
+            div=mine.totalTodayIncomeString
+          .my_top_r
+            div 累计收益(元)
+            div=mine.totalWorthValue
+      .my_maincon
+        .my_con
+          .my_con_t
+            div 瑞富宝
+            div=mine.wallet.totalWorthValueString
+          .my_con_b
+            div#walletmessage
+            div='昨日收益:'
+              span#wallet=mine.wallet.totalAccumIncomeString
+          span.icon
+        .my_con
+          .my_con_t
+            div 持有组合
+            div=mine.portfolios.portfolioTodayIncomeString
+          .my_con_b
+            div#portfoliomessage
+            div='昨日收益:'
+              span#portfolio=mine.portfolios.portfolioTodayIncomeString
+          span.icon
+        .my_con
+          .my_con_t
+            div 持有基金
+            div=mine.fund.totalWorthValueString
+          .my_con_b
+            div#fundmessage
+            div='昨日收益:'
+              span#fund=mine.fund.totalAccumIncomeString
+          span.icon
+      .my_part3
+        .dtgl
+          div 定投管理
+          span.icon
+        .fxpc
+          div 风险评测
+          if risk.have_tested == true
+            div=risk.invest_risk_tolerance_desc
+          else
+            div 未评测
+          span.icon
+      .my_part4
+        .bankCard
+          div 银行卡管理
+          span.icon
+        .userEdit
+          div 账户设置
+          span.icon
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      var mine = !{JSON.stringify(mine)};
+      var risk = !{JSON.stringify(risk)};
+      console.log(mine)
+
+    script(type = 'text/javascript', src = '/static/js/mine.js')

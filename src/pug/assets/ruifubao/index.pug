@@ -1,0 +1,62 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 持有瑞富宝
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.assets-ruifubao-index
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 持有瑞富宝
+      a.mui-pull-right.link-a#to-records 交易记录
+    .content-body
+      .banner-info-wrap
+        h5 总资产(元)
+        h1(class=totalWorthValue==0?'':(totalWorthValue<0?'green-text':'red-text'))=totalWorthValue
+        p=inTransitAmountString
+        .my-detail
+          .sub-wrap
+            p.title='日收益('+netValueDateString+')'
+            p(class=totalTodayIncome==0?'':(totalTodayIncome<0?'green-text':'red-text'))=totalTodayIncome
+          .vertical
+          .sub-wrap
+            p.title 累计收益(元)
+            p(class=totalIncome==0?'':(totalIncome<0?'green-text':'red-text'))=totalIncome
+      if (totalWorthValue!=0)
+        if inTransitNum != 0
+          ul.mui-table-view.transparent
+            li.mui-table-view-cell
+              a(href='/page/assets/ruifubao/records').mui-navigate-right='有'+inTransitNum+'笔买入确认中'
+        else
+         .white-wrap
+        ul.mui-table-view.portfolio-list#list
+          each fundModel in fundModelList
+            a(data-href='/page/ruifu/monetaryDetail?fundCode='+fundModel.fCode).mui-table-view-cell
+              .title=fundModel.fundName
+                span='('+fundModel.walletString+')'
+              .detail
+                .sub-wrap.left
+                  p.title 总资产(元)
+                  p(class=fundModel.totalWorthValue<0?'green-text':'red-text')=fundModel.totalWorthValueString
+                .sub-wrap
+                  p.title='日收益('+fundModel.netValueDateString+')'
+                  p(class=fundModel.totalTodayIncome<0?'green-text':'red-text')=fundModel.totalTodayIncomeString
+                .sub-wrap
+                  p.title 累计收益(元)
+                  p(class=fundModel.totalAccumIncome<0?'green-text':'red-text')=fundModel.totalAccumIncomeString
+              if fundModel.sellInTransit
+                .other
+                  span.warn-icon i
+                  span=fundModel.sellInTransitString
+      else
+        .novalue
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      var fundModelList = !{JSON.stringify(fundModelList)};
+    script(type='text/javascript', src='/static/js/ruifubaoAssets.js')

@@ -1,0 +1,157 @@
+.banner-info-wrap {
+  padding: 35px 0;
+  height: auto;
+  .my-detail {
+    position: relative;
+    margin: 0;
+    height: auto;
+    .title {
+      line-height: 60px;
+      font-size: 34px;
+
+      margin: 0;
+    }
+    .large-value{
+      line-height: 75px;
+      font-size: 44px;
+      color: #98776e;
+    }
+    .vertical{
+      position: absolute;
+      height: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+    .list-item{
+      padding: 0 25px;
+      font-size: 28px;
+      line-height: 65px;
+      text-align: left;
+      .label{
+        color: $brown-text-color;
+      }
+      .value{
+        float: right;
+      }
+    }
+    .sub-wrap{
+      //width: 374px;
+    }
+  }
+}
+
+.fund-block{
+  margin-top: 20px;
+  padding: 25px 0;
+  background-color: #fff;
+  .left{
+    display: inline-block;
+    width: 50%;
+    padding: 0 35px;
+  }
+  .right{
+    display: inline-block;
+    width: 50%;
+    padding: 0 35px;
+  }
+  .label{
+    color: $brown-text-color;
+  }
+  .value{
+    float: right;
+  }
+  .with-bottom{
+    margin-bottom: 15px;
+  }
+}
+
+.value{
+  color: $main-text-color;
+}
+
+.mui-btn-warning{
+  margin-top: 150px;
+}
+
+.mui-table-view{
+  margin-top: 20px;
+}
+
+.text-block{
+  position: absolute;
+  top: 15px;
+  left: 110px;
+  text-align: left;
+  p{
+    width: 200px;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $grey-text-color;
+  }
+}
+.icon {
+  display: block;
+  position: absolute;
+  top: 17px;
+  height: 60px;
+  width: 60px;
+  background-size: cover;
+}
+
+.OFFLINE {
+  background-size: 56px auto;
+}
+
+.buy-info{
+  margin-top: 20px;
+  background-color: #fff;
+  .item{
+    position: relative;
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    font-size: 30px;
+    color: $brown-text-color;
+    a{
+      color: $main-color;
+    }
+  }
+  .title-wrap{
+    padding: 30px 0;
+    border-bottom: 1px solid $grey-border-color;
+  }
+  .detail-wrap{
+    height: 100px;
+    line-height: 100px;
+  }
+  .icon-wrap{
+    height: 65px;
+    padding-left: 40px;
+  }
+}
+
+.mui-popup{
+  width: 590px;
+  height: auto;
+  .mui-popup-buttons{
+    height: auto;
+  }
+  .mui-popup-text{
+    text-align: center;
+  }
+}
+.mui-popup-inner{
+  padding: 30px 30px 50px 30px;
+  .mui-popup-title{
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+.mui-table-view.transparent{
+  margin-top: 0;
+}
+

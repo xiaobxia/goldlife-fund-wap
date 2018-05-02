@@ -1,0 +1,25 @@
+.mui-btn-warning{
+  margin-top: 125px;
+}
+.banner {
+  position: relative;
+  margin-bottom: 80px;
+  padding: 60px 0 75px 0;
+  background-color: #fff;
+  .mui-icon-checkmarkempty {
+    display: block;
+    position: relative;
+    margin: 0 auto 45px auto;
+    color: #fff;
+    width: 124px;
+    height: 124px;
+    font-size: 124px;
+    border-radius: 124px;
+    background-color: rgb(0, 193, 255);
+  }
+  .explain {
+    color: $main-text-color;
+    font-size: 34px;
+    text-align: center;
+  }
+}

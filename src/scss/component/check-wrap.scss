@@ -1,0 +1,14 @@
+.check-wrap{
+  padding: 25px 30px;
+  background-color: transparent;
+  color: $main-text-color;
+  a{
+    color: $yellow;
+  }
+  input{
+    width: 30px;
+    height: 30px;
+    margin-right: 1em;
+    vertical-align: bottom;
+  }
+}

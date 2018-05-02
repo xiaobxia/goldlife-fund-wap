@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/jquery-3.1.0.min.js')
+    title 调仓历史
+    script(type='text/javascript').
+      setAdaptive();
+  body.combination-warehouseHistory
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 调仓历史
+    .content-body
+      .main
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type = 'text/javascript').
+      var warehouseHistory = !{JSON.stringify(warehouseHistory)};
+      console.log(warehouseHistory)
+      function loadURL(data) {
+        window.location = data
+      }
+    script(type = 'text/javascript', src = '/static/js/warehouseHistory.js')

@@ -1,0 +1,270 @@
+.myProperty {
+  height: 188px;
+  background-color: #fff;
+  padding-top: 21px;
+  padding-left: 29px;
+  position: relative;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+#myPropertybtn{
+  height: 188px;
+  width: 430px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.myProperty_l_t {
+  font-size: 31px;
+  line-height: 75px;
+  color: #95776D;
+}
+
+.myProperty_l_b {
+  font-size: 25px;
+  line-height: 65px;
+  color: #8C8A8B;
+}
+
+
+
+.myProperty .openeye {
+  background: url("/static/asset/eyepage.jpg");
+  display: block;
+  background-size: cover;
+  width: 49px;
+  height: 31px;
+  position: absolute;
+  left: 192px;
+  top: 45px;
+  z-index: 99;
+}
+
+.myProperty .closeeye {
+  background: url("/static/asset/closeeye.jpg");
+  display: block;
+  background-size: cover;
+  width: 49px;
+  height: 31px;
+  position: absolute;
+  left: 192px;
+  top: 45px;
+  z-index: 99;
+}
+
+.myProperty .span2 {
+  background: url("/static/asset/icon_r.jpg");
+  display: block;
+  background-size: cover;
+  width: 13px;
+  height: 24px;
+  position: absolute;
+  right: 35px;
+  top: 86px;
+}
+
+.managelink {
+  height: 225px;
+}
+
+.managelink div {
+  height: 225px;
+  width: 33.3%;
+  background-size: cover!important;
+  float: left;
+}
+
+.managelink .rfb {
+  background: url("/static/asset/rfb.jpg") no-repeat;
+}
+
+.managelink .jjzh {
+  background: url("/static/asset/jjzh.jpg") no-repeat;
+}
+
+.managelink .rxjj {
+  background: url("/static/asset/rxjj.jpg") no-repeat;
+}
+
+.banner {
+  height: 240px;
+  width: 750px;
+  //background-color: #00beff;
+}
+
+.rfb_part {
+  height: 430px;
+  margin-top: 18px;
+}
+
+.rfb_part_title {
+  height: 87px;
+  width: 750px;
+  background: url("/static/asset/rfb_title.jpg");
+  background-size: cover;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.rfb_part_com {
+  height: 342px;
+  padding-top: 52px;
+  background-color: #fff;
+  position: relative;
+}
+
+.rfb_part_com div:nth-child(1) {
+  font-size: 28px;
+  color: #BBB0AE;
+  line-height: 30px;
+  position: absolute;
+  left: 89px;
+  top: 52px;
+}
+
+.rfb_part_com div:nth-child(2) {
+  font-size: 72px;
+  color: red;
+  line-height: 72px;
+  position: absolute;
+  left: 94px;
+  top: 104px;
+}
+
+.rfb_part_com div:nth-child(3) {
+  font-size: 27px;
+  color: #94786C;
+  line-height: 27px;
+  position: absolute;
+  left: 433px;
+  top: 72px;
+}
+
+.rfb_part_com div:nth-child(4) {
+  font-size: 27px;
+  color: #BBB0AE;
+  line-height: 27px;
+  span:nth-child(1) {
+    color: red;
+  }
+  position: absolute;
+  left: 433px;
+  top: 138px;
+}
+
+.rfb_part_com .btn {
+  width: 572px;
+  height: 87px;
+  background-color: #FFAA01;
+  line-height: 87px;
+  text-align: center;
+  color: #fff;
+  border-radius: 43px;
+  position: absolute;
+  left: 89px;
+  top: 224px;
+}
+
+.rfb_part_com .icon {
+  width: 1px;
+  height: 117px;
+  background-color: #DCDCDC;
+  position: absolute;
+  left: 374px;
+  top: 61px;
+}
+.zh_part{
+  margin-top: 20px;
+}
+.zh_part_title {
+  height: 87px;
+  width: 750px;
+  background: url("/static/asset/zh_title.jpg");
+  background-size: cover;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.fundPortfollo{
+  height: 168px;
+  background-color: white;
+  padding: 25px 0 28px 80px;
+}
+
+.fundPortfollo_l{
+  width: 200px;
+  height:115px;
+  border-right: 1px solid #DCDCDC;
+  float: left;
+  padding-top: 7px;
+}
+.fundPortfollo_l ul{
+  width: 200px;
+  height:168px;
+  margin: 0;
+  padding:0;
+}
+.fundPortfollo_l ul li{
+  list-style: none;
+}
+
+.fundPortfollo_l ul li:nth-child(1){
+  font-size:44px;
+  line-height: 58px;
+  color: red;
+  a{
+    font-size: 24px;
+    text-decoration: none;
+    color: red;
+  }
+}
+.fundPortfollo_l ul li:nth-child(2){
+  font-size:28px;
+  line-height: 48px;
+  color: #BAB0AF;
+}
+
+.fundPortfollo_r{
+  height:168px;
+  float: left;
+  padding-top: 7px;
+  padding-left: 37px;
+}
+
+.fundPortfollo_r ul{
+  height:168px;
+  margin: 0;
+}
+.fundPortfollo_r ul li{
+  list-style: none;
+}
+
+.fundPortfollo_r ul li:nth-child(1){
+  font-size: 40px;
+  line-height: 58px;
+  color: #94776F;
+}
+.fundPortfollo_r ul li:nth-child(2){
+  font-size:28px;
+  line-height: 48px;
+  color: #BAB0AF;
+}
+
+.index_bu{
+  width: 750px;
+  height: 115px;
+  background: url("/static/asset/index_bu.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.swiper-slide a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide a img{
+  width: 100%;
+  height: 100%;
+
+}

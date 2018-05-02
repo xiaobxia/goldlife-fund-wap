@@ -1,0 +1,895 @@
+
+body {
+  background-color: #fff;
+}
+
+.fund_info {
+  background-color: white;
+}
+
+.span2 {
+  width: 49%;
+  display: inline-block;
+  text-align: center;
+  padding: 7px 0;
+  height: 64px;
+  font-size: 28px;
+  line-height: 50px;
+}
+
+.span3 {
+  width: 32%;
+  display: inline-block;
+  text-align: center;
+  padding: 7px 0;
+  height: 64px;
+  font-size: 28px;
+  line-height: 50px;
+}
+
+.span4 {
+  width: 24%;
+  display: inline-block;
+  padding: 8px 0px;
+}
+
+.oneLine {
+  color: black;
+  padding: 7px 0px;
+  border-bottom: 1px solid #cccccc;
+  font-size: 28px;
+}
+
+.fund_info .span3 {
+  width: 32%;
+  display: inline-block;
+  text-align: center;
+  padding: 7px 0;
+  height: 64px;
+  font-size: 28px;
+}
+
+.fund_info .selected {
+  border-bottom: 2px solid #FFAA01;
+  //color: $theme-color;
+  color: #98776E;
+}
+
+.J_notice {
+  color: #929091;
+}
+
+.J_know {
+  color: #929091;
+}
+
+.J_doc {
+  color: #929091;
+}
+
+.J_purchase {
+  display: block;
+  width: 100%;
+}
+
+#FUND_L {
+  .title_div {
+    font-size: 28px;
+    height: 140px;
+    background-color: #ebebeb;
+  }
+
+  .fund_space {
+    height: 20px;
+  }
+
+  .invest_left {
+    font-size: 28px;
+  }
+  .fund_apply_left {
+    width: 30%;
+    display: inline-block;
+    text-align: left;
+    padding: 16px 0px;
+    padding-left: 40px;
+    float: left;
+    min-height: 70px;
+  }
+
+  .fund_apply_right {
+    width: 70%;
+    display: inline-block;
+    text-align: center;
+    padding: 16px 0px;
+    float: left;
+    min-height: 70px;
+  }
+
+  .fund_operation_title {
+    font-size: 32px;
+    height: 70px;
+    background-color: #FFAA01;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 16px 0px;
+    color: #ffffff;
+  }
+
+  .left_border {
+    border-left: 1px solid #cccccc;
+  }
+
+  .border_top {
+    border-top: 1px solid #cccccc;
+  }
+
+  .border_right {
+    //border-right: 1px solid #cccccc;
+    color: #98776E;
+  }
+
+  .border_bottom {
+
+  }
+
+  .fund_exceed_left {
+    width: 20%;
+    display: inline-block;
+    text-align: left;
+    padding: 16px 0px;
+    padding-left: 40px;
+    float: left;
+  }
+
+  .fund_exceed_right {
+    width: 80%;
+    display: inline-block;
+    text-align: center;
+    padding: 16px 0px;
+    float: left;
+  }
+
+  .white_font {
+    color: #ffffff;
+  }
+
+  .line_block_div {
+    overflow: auto;
+    margin-bottom: 0px;
+  }
+
+  .dataintable {
+    margin: 20px 40px 20px 40px;
+    border-collapse: collapse;
+    border: 1px solid #cccccc;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    width: 90%;
+    padding: 0;
+    /*display: table;*/
+    table-layout: fixed;
+    text-align: left;
+  }
+
+  tr {
+    vertical-align: inherit;
+    height: 60px;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  table.dataintable td {
+    vertical-align: middle;
+  }
+
+  .table_block_left {
+    width: 30%;
+    font-size: 24px;
+    padding: 12px 30px 12px 0px;
+  }
+
+  .table_block_right {
+    width: 70%;
+    font-size: 24px;
+    padding: 12px 30px 12px 36px;
+    color: #929091;
+  }
+
+  .invest_block_left {
+    width: 30%;
+    min-height: 140px;
+    font-size: 28px;
+    //color: $theme-color;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*flex:3;*/
+  }
+
+  .invest_block_right {
+    width: 70%;
+    min-height: 140px;
+    font-size: 24px;
+    padding: 12px 30px 12px 36px;
+    color: #929091;
+  }
+
+  .operation_sure_img {
+    width: 100%;
+    /*height: 100%;*/
+    /*objec-fit: cover;*/
+    display: block;
+  }
+}
+
+#FUND_M {
+  .title_div {
+    font-size: 28px;
+    height: 70px;
+    background-color: #ebebeb;
+  }
+
+  .large {
+    color: #ffffff;
+    font-family: "Microsoft YaHei";
+    background-color: #FFAA01;
+    font-size: 30px;
+    text-align: center;
+    min-height: 70px;
+    height: 20px;
+    line-height: 70px;
+  }
+
+  .large_tr {
+    width: 100%;
+    padding-left: 40px;
+    background-color: #fff;
+    color: #96786E;
+    //border-bottom:1px solid #CCCCCC;
+  }
+
+  .managerIntro {
+    text-align: left;
+    padding: 50px 42px 128px 42px;
+    line-height: 48px;
+    background-color: #ffffff;
+  }
+
+  .dividendResolution {
+    font-family: "Microsoft YaHei";
+    font-size: 30px;
+    text-align: left;
+    min-height: 70px;
+    height: 20px;
+    line-height: 70px;
+  }
+
+  .dividendResolution_tr {
+    width: 100%;
+    padding-left: 40px;
+    background-color: #fff;
+    color: #96786E;
+    border-bottom: 1px solid #CCCCCC;
+  }
+  .fundManagerEx2 {
+    color: #ffffff;
+    font-family: "Microsoft YaHei";
+    background-color: #ffffff;
+    font-size: 28px;
+  }
+
+  .font1 {
+    color: #333333;
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+  }
+
+  .font2 {
+    color: #333333;
+    font-family: "Microsoft YaHei";
+    font-size: 28px;
+  }
+
+  .font3 {
+    color: #ff0000;
+    font-family: "Microsoft YaHei";
+    font-size: 28px;
+  }
+
+  .font4 {
+    color: #333333;
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+  }
+
+  .font5 {
+    color: #22ac38;
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+  }
+
+  .font6 {
+    color: #FFAA01;
+    font-family: "Microsoft YaHei";
+    font-size: 28px;
+  }
+
+  .fundManagerEx {
+    color: #ffffff;
+    font-family: "Microsoft YaHei";
+    background-color: #ffffff;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .fundManagerEx2 {
+    color: #ffffff;
+    font-family: "Microsoft YaHei";
+    background-color: #ffffff;
+    font-size: 28px;
+  }
+
+  .fund_space {
+    height: 70px;
+  }
+
+  .fund_space2 {
+    height: 20px;
+  }
+
+  .invest_left {
+    font-size: 28px;
+  }
+  .fund_apply_left {
+    width: 30%;
+    display: inline-block;
+    text-align: left;
+    padding: 16px 0px;
+    padding-left: 40px;
+    float: left;
+    min-height: 70px;
+  }
+
+  .fund_apply_right {
+    width: 70%;
+    display: inline-block;
+    text-align: center;
+    padding: 16px 0px;
+    float: left;
+    min-height: 70px;
+  }
+
+  .fund_operation_title {
+    font-size: 32px;
+    height: 70px;
+    background-color: #FFAA01;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 16px 0px;
+    color: #ffffff;
+  }
+
+  .left_border {
+    border-left: 1px solid #cccccc;
+  }
+
+  .border_top {
+    border-top: 1px solid #cccccc;
+  }
+
+  .border_right {
+    //border-right: 1px solid #cccccc;
+  }
+
+  .border_bottom {
+    border-bottom: 1px solid #cccccc;
+  }
+
+  .fund_exceed_left {
+    width: 20%;
+    display: inline-block;
+    text-align: left;
+    padding: 16px 0px;
+    padding-left: 40px;
+    float: left;
+  }
+
+  .fund_exceed_right {
+    width: 80%;
+    display: inline-block;
+    text-align: center;
+    padding: 16px 0px;
+    float: left;
+  }
+
+  .white_font {
+    color: #ffffff;
+  }
+
+  .line_block_div {
+    overflow: auto;
+    margin-bottom: 0px;
+  }
+
+  .dataintable {
+    border-collapse: collapse;
+    border: 1px solid #cccccc;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    width: 100%;
+    padding: 0;
+    /*display: table;*/
+    table-layout: fixed;
+    text-align: center;
+  }
+
+  tr {
+    vertical-align: inherit;
+    display: flex;
+  }
+
+  table.dataintable td {
+    vertical-align: middle;
+  }
+
+  .invest_block {
+    min-height: 88px;
+    color: #FFAA01;
+    font-size: 28px;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    line-height: 88px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .invest_block_left2 {
+    min-height: 88px;
+    font-size: 28px;
+    align-items: center;
+    width: 50%;
+    height: 20px;
+    line-height: 88px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    padding-left: 40px;
+    color: #967772;
+  }
+
+  .invest_block_right2 {
+    min-height: 88px;
+    /*display: inline-block;*/
+    width: 50%;
+    font-size: 28px;
+    align-items: center;
+    /*flex:1;*/
+    height: 20px;
+    line-height: 88px;
+    text-align: right;
+    padding-right: 60px;
+  }
+
+  .invest_block_left {
+    min-height: 88px;
+    /*display: inline-block;*/
+    font-size: 28px;
+    align-items: center;
+    /*flex: 1;*/
+    width: 33.3%;
+    height: 20px;
+    line-height: 88px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #B3A09A;
+  }
+
+  .invest_block_middle {
+    min-height: 88px;
+    /*display: inline-block;*/
+    width: 33.3%;
+    font-size: 28px;
+    align-items: center;
+    /*flex: 1;*/
+    height: 20px;
+    line-height: 88px;
+    color: #929091;
+  }
+
+  .invest_block_right {
+    min-height: 88px;
+    /*display: inline-block;*/
+    width: 33.4%;
+    font-size: 28px;
+    align-items: center;
+    /*flex:1;*/
+    height: 20px;
+    line-height: 88px;
+    color: #929091;
+  }
+
+  .table_block {
+    min-height: 70px;
+    display: inline-block;
+    color: #ffffff;
+    align-items: center;
+    flex: 1;
+    height: 20px;
+    line-height: 70px;
+  }
+
+  .table_block_left {
+    min-height: 70px;
+    display: inline-block;
+    align-items: center;
+    flex: 3;
+    height: 20px;
+    line-height: 70px;
+  }
+
+  .table_block_middle {
+    min-height: 70px;
+    display: inline-block;
+    align-items: center;
+    flex: 4;
+    height: 20px;
+    line-height: 70px;
+  }
+
+  .table_block_right {
+    min-height: 70px;
+    display: inline-block;
+    align-items: center;
+    flex: 2;
+    height: 20px;
+    line-height: 70px;
+  }
+
+  .operation_sure_img {
+    width: 100%;
+    /*height: 100%;*/
+    /*objec-fit: cover;*/
+    display: block;
+  }
+}
+
+#FUND_R {
+  .title_div {
+    font-size: 28px;
+    height: 70px;
+    background-color: #ebebeb;
+  }
+
+  .managerIntro {
+    text-align: left;
+    padding: 50px 42px 128px 42px;
+    line-height: 48px;
+    background-color: #ffffff;
+  }
+
+  .dividendResolution {
+    color: #ffffff;
+    font-family: "Microsoft YaHei";
+    background-color: #FFAA01;
+    font-size: 30px;
+    text-align: center;
+    min-height: 70px;
+    height: 20px;
+    line-height: 70px;
+  }
+
+  .dividendResolution_tr {
+    width: 100%;
+    padding-left: 40px;
+    background-color: #fff;
+    color: #96786E;
+    border-bottom: 1px solid #CCCCCC;
+    text-align: left;
+  }
+  .fundManagerEx2 {
+    color: #ffffff;
+    font-family: "Microsoft YaHei";
+    background-color: #ffffff;
+    font-size: 28px;
+  }
+
+  .font1 {
+    color: #333333;
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+  }
+
+  .font2 {
+    //color:#333333;
+    color: #95776C;
+    font-family: "Microsoft YaHei";
+    font-size: 28px;
+  }
+
+  .font3 {
+    color: #ff0000;
+    font-family: "Microsoft YaHei";
+    font-size: 28px;
+  }
+
+  .font4 {
+    color: #333333;
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+  }
+
+  .font5 {
+    color: #22ac38;
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+  }
+
+  .font6 {
+    //color:$theme-color;
+    color: #918F90;
+    font-family: "Microsoft YaHei";
+    font-size: 28px;
+  }
+
+  .font7 {
+    font-family: "Microsoft YaHei";
+    font-size: 24px !important;
+    color: #929091;
+  }
+
+  .fundManagerEx {
+    color: #ffffff;
+    font-family: "Microsoft YaHei";
+    background-color: #ffffff;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .fundManagerEx2 {
+    color: #ffffff;
+    font-family: "Microsoft YaHei";
+    background-color: #ffffff;
+    font-size: 28px;
+  }
+
+  .fund_space {
+    height: 20px;
+  }
+
+  .invest_left {
+    font-size: 28px;
+  }
+  .fund_apply_left {
+    width: 30%;
+    display: inline-block;
+    text-align: left;
+    padding: 16px 0px;
+    padding-left: 40px;
+    float: left;
+    min-height: 70px;
+  }
+
+  .fund_apply_right {
+    width: 70%;
+    display: inline-block;
+    text-align: center;
+    padding: 16px 0px;
+    float: left;
+    min-height: 70px;
+  }
+
+  .fund_operation_title {
+    font-size: 32px;
+    height: 70px;
+    background-color: #FFAA01;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 16px 0px;
+    color: #ffffff;
+  }
+
+  .left_border {
+    border-left: 1px solid #cccccc;
+  }
+
+  .border_top {
+    border-top: 1px solid #cccccc;
+  }
+
+  .border_right {
+    border-right: 1px solid #cccccc;
+  }
+
+  .border_bottom {
+    border-bottom: 1px solid #cccccc;
+  }
+
+  .fund_exceed_left {
+    width: 20%;
+    display: inline-block;
+    text-align: left;
+    padding: 16px 0px;
+    padding-left: 40px;
+    float: left;
+  }
+
+  .fund_exceed_right {
+    width: 80%;
+    display: inline-block;
+    text-align: center;
+    padding: 16px 0px;
+    float: left;
+  }
+
+  .white_font {
+    color: #ffffff;
+  }
+
+  .line_block_div {
+    overflow: auto;
+    margin-bottom: 0px;
+  }
+
+  .dataintable {
+    border-collapse: collapse;
+    border: 1px solid #cccccc;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    width: 100%;
+    padding: 0;
+    /*display: table;*/
+    table-layout: fixed;
+    text-align: center;
+  }
+
+  tr {
+    vertical-align: inherit;
+    display: flex;
+  }
+
+  table.dataintable td {
+    vertical-align: middle;
+  }
+
+  .invest_block {
+    min-height: 88px;
+    /*display: inline-block;*/
+    font-size: 28px;
+    align-items: center;
+    width: 100%;
+    /*flex: 1;*/
+    height: 20px;
+    line-height: 88px;
+  }
+
+  .invest_block_left2 {
+    min-height: 88px;
+    /*display: inline-block;*/
+    font-size: 28px;
+    align-items: center;
+    width: 50%;
+    /*flex: 1;*/
+    height: 20px;
+    line-height: 88px;
+  }
+
+  .invest_block_middle2 {
+    min-height: 88px;
+    /*display: inline-block;*/
+    font-size: 28px;
+    align-items: center;
+    width: 50%;
+    /*flex: 1;*/
+    height: 20px;
+    line-height: 88px;
+  }
+
+  .invest_block_right2 {
+    min-height: 88px;
+    /*display: inline-block;*/
+    font-size: 28px;
+    align-items: center;
+    width: 50%;
+    /*flex:1;*/
+    height: 20px;
+    line-height: 88px;
+  }
+
+  .invest_block_left {
+    min-height: 88px;
+    /*display: inline-block;*/
+    font-size: 28px;
+    align-items: center;
+    width: 33.3%;
+    /*flex: 1;*/
+    height: 20px;
+    line-height: 88px;
+  }
+
+  .invest_block_middle {
+    min-height: 88px;
+    /*display: inline-block;*/
+    font-size: 28px;
+    align-items: center;
+    width: 33.3%;
+    /*flex: 1;*/
+    height: 20px;
+    line-height: 88px;
+  }
+
+  .invest_block_right {
+    min-height: 88px;
+    /*display: inline-block;*/
+    font-size: 28px;
+    align-items: center;
+    width: 33.4%;
+    /*flex:1;*/
+    height: 20px;
+    line-height: 88px;
+  }
+
+  .table_block {
+    min-height: 70px;
+    display: inline-block;
+    color: #ffffff;
+    align-items: center;
+    flex: 1;
+    height: 20px;
+    line-height: 70px;
+  }
+
+  .table_block_left {
+    min-height: 70px;
+    display: inline-block;
+    align-items: center;
+    flex: 3;
+    height: 20px;
+    line-height: 70px;
+  }
+
+  .table_block_middle {
+    min-height: 70px;
+    display: inline-block;
+    align-items: center;
+    flex: 4;
+    height: 20px;
+    line-height: 70px;
+  }
+
+  .table_block_right {
+    min-height: 70px;
+    display: inline-block;
+    align-items: center;
+    flex: 2;
+    height: 20px;
+    line-height: 70px;
+  }
+
+  .operation_sure_img {
+    width: 100%;
+    /*height: 100%;*/
+    /*objec-fit: cover;*/
+    display: block;
+  }
+}
+
+p {
+  font-size: 28px !important;
+}
+
+#myChart {
+  background-color: white;
+  width: 750px;
+  height: 350px;
+}

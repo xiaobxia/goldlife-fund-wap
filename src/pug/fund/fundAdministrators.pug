@@ -1,0 +1,47 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    title 基金管理人
+    script(type='text/javascript').
+      setAdaptive();
+  body.fund-fundAdministrators
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 基金管理人
+    .content-body
+      #pullrefresh.mui-content.mui-scroll-wrapper
+        .mui-scroll
+          #managerIntro.managerIntro.font1
+          .base_div.line_block_div.fund_space(style='background-color: #ebebeb;')
+          table.dataintable
+            tbody
+              tr.fundManagerEx3
+                td.invest_block_left2.font2
+                  | 旗下基金
+                td.invest_block_middle.font2
+                td.invest_block_right.font2
+          table.dataintable
+            tbody
+              tr.fundManagerEx
+                td.invest_block_left.border_right.border_bottom.font2
+                  | 基金名称
+                td.invest_block_middle.border_right.border_bottom.font2
+                  | 基金类型
+                td.invest_block_right.border_bottom.font2
+                  | 近一年收益
+          // 数据列表
+          table.dataintable
+            tbody#performance
+  script(type='text/javascript', src='/static/js/commonBody.js')
+  script(type='text/javascript').
+    var fundAdministrators = !{JSON.stringify(fundAdministrators)};
+    console.log(fundAdministrators)
+  script(type = 'text/javascript', src = '/static/js/fundAdministrators.js').
+
+

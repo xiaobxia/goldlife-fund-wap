@@ -1,0 +1,67 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 陈大大之锐意进取
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.assets-portfolio-position
+    header#header.mui-bar.mui-bar-nav
+      a(href='/page/assets/portfolio').mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title=protocolName
+      a.mui-pull-right(href='/page/combination/combinationDetail?combinationCode='+portfolioCode) 组合详情
+    .content-body.has-bar
+      .banner-info-wrap
+        h5 总资产（元）
+        h1(class=portfolioWorthValue==0?'':(portfolioWorthValue<0?'green-text':'red-text'))=portfolioWorthValueString
+        //p 买入待确认1000.00元
+        .my-detail
+          .sub-wrap
+            p.title='日收益('+netValueDateString+')'
+            p(class=portfolioTodayIncome==0?'':(portfolioTodayIncome<0?'green-text':'red-text'))=portfolioTodayIncomeString
+          .vertical
+          .sub-wrap
+            p.title 累计收益（元）
+            p(class=portfolioAccumIncome=0?'':(portfolioAccumIncome<0?'green-text':'red-text'))=accumIncomeString
+      ul.mui-table-view.transparent
+        li.mui-table-view-cell 持仓明细
+      ul.mui-table-view.portfolio-list
+        each portfolioFund in portfolioFunds
+          li.mui-table-view-cell
+            .title=portfolioFund.fundName+' '+portfolioFund.fCode
+              span.rate=(parseInt(portfolioFund.investRate*10000)/100)+'%'
+            .detail
+              .sub-wrap.left
+                p.title 资产(元)
+                p=portfolioFund.totalWorthValueString
+              .sub-wrap
+                p.title 昨日收益(元)
+                p(class=portfolioFund.totalTodayIncome<0?'green-text':'red-text')=portfolioFund.totalTodayIncomeString
+              .sub-wrap
+                p.title 累计收益(元)
+                p(class=portfolioFund.totalAccumIncomeString<0?'green-text':'red-text')=portfolioFund.totalAccumIncomeString
+      .other=sellInTransitString
+      .company-warn
+        p 基金销售服务由杭州科地瑞富基金销售有限公司提供
+        p 基金历史业绩不预示未来表现，市场有风险，投资需谨慎
+    if stockUp == 1
+      .position-wrap
+        h3.title 您的组合对比组合模型发生了偏离，可以跟随组合模型配置
+        a(href='/page/assets/portfolio/stocks?transferId='+transferId+'&portfolioCode='+portfolioCode+'&portfolioTradeAcco='+portfolioTrades[0].tradeAcco) 一键调仓>
+    if stockUp == 2
+      .position-wrap
+        h3.title 组合调仓中
+        a(href='/page/assets/portfolio/records')#view-records 查看详情>
+    .bottom-button-bar
+      a.button#redeem-btn(class=canSell?'':'disabled') 赎回
+      a.button#buy-btn 购买
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      var portfolioTrades = !{JSON.stringify(portfolioTrades)};
+      var protocolName = '#{protocolName}';
+    script(type='text/javascript', src='/static/js/portfolioPosition.js')

@@ -1,0 +1,242 @@
+.public-search-index{
+  @import "public/search/index";
+}
+.public-quotas-index{
+  @import "public/quotas/index";
+}
+.public-selectSubBranch-index{
+  @import "public/selectSubBranch/index";
+}
+.public-openAccount-index {
+  @import "public/openAccount/index";
+}
+.public-openAccount-openAccountStep2 {
+  @import "public/openAccount/openAccountStep2";
+}
+.public-openAccount-openAccountStep3 {
+  @import "public/openAccount/openAccountStep3";
+}
+.public-openAccount-getAddr{
+  @import "public/openAccount/getAddr";
+}
+.public-openAccount-openResult {
+  @import "public/openAccount/openResult";
+}
+.public-openAccount-autoPayProtocol {
+  @import "public/openAccount/autoPayProtocol";
+}
+
+.assets-index{
+  @import "assets/index";
+}
+.assets-portfolio-index {
+  @import "assets/portfolio/index";
+}
+.assets-portfolio-redeem {
+  @import "assets/portfolio/redeem";
+}
+.assets-portfolio-redeemResult {
+  @import "assets/portfolio/redeemResult";
+}
+.assets-portfolio-records {
+  @import "assets/portfolio/records";
+}
+.assets-portfolio-recordDetail {
+  @import "assets/portfolio/recordDetail";
+}
+.assets-portfolio-position {
+  @import "assets/portfolio/position";
+}
+.assets-portfolio-stocks {
+  @import "assets/portfolio/stocks";
+}
+.assets-ruifubao-index {
+  @import "assets/ruifubao/index";
+}
+.assets-ruifubao-records {
+  @import "assets/ruifubao/records";
+}
+.assets-ruifubao-recordDetail {
+  @import "assets/ruifubao/recordDetail";
+}
+
+.assets-fund-index {
+  @import "assets/fund/index";
+}
+
+.assets-fund-redeem {
+  @import "assets/fund/redeem";
+}
+
+.assets-fund-redeemResult {
+  @import "assets/fund/redeemResult";
+}
+.assets-fund-recordDetail {
+  @import "assets/fund/recordDetail";
+}
+
+
+.assets-fund-selectDividend {
+  @import "assets/fund/selectDividend";
+}
+
+.assets-fund-selectDividendResult {
+  @import "assets/fund/selectDividendResult";
+}
+
+.assets-fund-assetDetail {
+  @import "assets/fund/assetDetail";
+}
+
+.assets-fund-records {
+  @import "assets/fund/records";
+}
+
+.combination-combinationBuy {
+  @import "combination/combinationBuy";
+}
+
+.combination-combinationDetail {
+  @import "combination/combinationDetail";
+}
+.combination-combinationList {
+  @import "combination/combinationList";
+}
+.combination-warehouseHistory {
+  @import "combination/warehouseHistory";
+}
+
+.combination-combinationResult {
+  @import "combination/combinationResult";
+}
+
+.combination-combinationProtocol {
+  @import "combination/combinationProtocol";
+}
+
+.fund-announcement{
+  @import "fund/announcement";
+}
+
+.fund-fundAdministrators{
+  @import "fund/fundAdministrators";
+}
+
+.fund-fundArchives{
+  @import "fund/fundArchives";
+}
+
+.fund-fundDetail{
+  @import "fund/fundDetail";
+}
+
+.fund-fundHistory{
+  @import "fund/fundHistory";
+}
+
+.fund-fundList{
+  @import "fund/fundList";
+}
+
+.fund-fundManager{
+  @import "fund/fundManager";
+}
+
+.fund-fundManagerTransfer{
+  @import "fund/fundManagerTransfer";
+}
+
+.fund-fundNotice{
+  @import "fund/fundNotice";
+}
+
+.fund-purchaseNotice{
+  @import "fund/purchaseNotice";
+}
+
+.fund-fundBuy{
+  @import "fund/fundBuy";
+}
+.fund-fundBuyResult{
+  @import "fund/fundBuyResult";
+}
+
+.ruifu-monetaryDetail{
+  @import "ruifu/monetaryDetail";
+}
+
+.ruifu-ruifuBuy{
+  @import "ruifu/ruifuBuy";
+}
+.ruifu-ruifuBuyResult{
+  @import "ruifu/ruifuBuyResult";
+}
+
+
+.ruifu-ruifuList{
+  @import "ruifu/ruifuList";
+}
+
+.ruifu-withdrawResult{
+  @import "ruifu/withdrawResult";
+}
+
+.ruifu-withdraw{
+  @import "ruifu/withdraw";
+}
+
+.ruifu-presentagreement{
+  @import "ruifu/presentagreement";
+}
+
+.user-assessResult{
+  @import "user/assessResult";
+}
+
+.user-assessRisk{
+  @import "user/assessRisk";
+}
+
+.user-castSurely{
+  @import "user/castSurely";
+}
+
+.user-mine{
+  @import "user/mine";
+}
+
+.user-bankcardList{
+  @import "user/bankcardList";
+}
+
+.user-transcationEdit{
+  @import "user/transactionEdit";
+}
+
+.user-userEdit{
+  @import "user/userEdit";
+}
+
+.user-messageEdit{
+  @import "user/messageEdit";
+}
+
+.user-editBankcard{
+  @import "user/editBankcard";
+}
+
+.user-manageindex{
+  @import "user/manageIndex";
+}
+
+.user-editCastsurely{
+  @import "user/editCastsurely";
+}
+
+.banner-companyProfile{
+  @import "banner/companyProfile";
+}
+
+.banner-whatIsRuifubao{
+  @import "banner/whatIsRuifubao";
+}

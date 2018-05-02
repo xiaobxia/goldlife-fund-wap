@@ -1,0 +1,65 @@
+.mui-table-view.collapse {
+  padding: 0;
+  background-color: transparent;
+  clear: both;
+  .mui-collapse {
+    height: auto;
+    line-height: 77px;
+    background-color: transparent;
+    color: $main-text-color;
+    text-align: center;
+  }
+  .mui-navigate-right:after {
+    display: inline;
+    position: static;
+    margin-left: .5em;
+    font-size: 26px;
+  }
+  .mui-collapse-content{
+    position: relative;
+    margin: 0;
+    padding: 25px 45px 20px 45px;
+    width: 100%;
+    background-color: #fff;
+    .main-title{
+      margin: 0 0 15px 0;
+      padding: 15px 0;
+      font-weight: $main-font-weight;
+      color: $main-text-color;
+      font-size: 28px;
+      text-align: left;
+      border-bottom: 1px solid $grey-border-color;
+      .right{
+        float: right;
+      }
+    }
+    .explain-text{
+      margin-top: 35px;
+      font-size: 26px;
+      color: $main-text-color;
+      text-align: left;
+      line-height: 1.1;
+    }
+  }
+  .content-item{
+    margin: 0 0 20px 0;
+    text-align: left;
+    .explain{
+      font-size: 26px;
+      color: $main-text-color;
+      line-height: 1.1;
+    }
+    .title {
+      font-size: 32px;
+      color: $brown-text-color;
+      line-height: 1.1;
+      margin-bottom: 15px;
+      .right{
+        float: right;
+        color: $main-text-color;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,56 @@
+.mui-segmented-control{
+  position: fixed;
+  top: 90px;
+  z-index: 1000;
+}
+.content-body{
+  padding-top: 180px;
+}
+.mui-table-view{
+  margin: 0;
+  padding-left: 35px;
+  a{
+    &:last-child{
+      .mui-table-view-cell{
+        border: none;
+      }
+    }
+  }
+  .mui-table-view-cell{
+    height: auto;
+    border-bottom: 1px solid $grey-border-color;
+    .title {
+      margin-bottom: 35px;
+      font-size: 32px;
+      span {
+        display: inline-block;
+      }
+      .name {
+        min-width: 300px;
+      }
+      .way {
+        min-width: 165px;
+        color: $red-text-color;
+        text-align: right;
+      }
+      .value{
+        margin: 0;
+        min-width: 200px;
+        color: $main-text-color;
+        text-align: right;
+      }
+    }
+    .explain{
+      position: relative;
+      .status{
+        float: right;
+      }
+      span{
+        display: inline-block;
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+    }
+  }
+}

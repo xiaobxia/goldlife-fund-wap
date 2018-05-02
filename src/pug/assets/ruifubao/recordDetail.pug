@@ -1,0 +1,202 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 详情
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/moment.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.assets-ruifubao-recordDetail
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 详情
+    .content-body
+      if type=='dividend'
+        .banner
+          span.mui-icon.mui-icon-checkmarkempty
+          .explain 分红发放确认
+        ul.mui-table-view
+          li.mui-table-view-cell
+            .left=fundName
+            .right=fundCode
+          li.mui-table-view-cell
+            .left 分红方式
+            .right=autoBuyString
+          if autoBuy === '0'
+            li.mui-table-view-cell
+              .left 红股份额
+              .right=dividendShare+'份'
+          else
+            li.mui-table-view-cell
+              .left 分红金额
+              .right=dividendBalance+'元'
+          li.mui-table-view-cell
+            .left 银行账户
+            .right=bankName+(bankAccount?'(****'+bankAccount.substr(-4,4)+')':'')
+          li.mui-table-view-cell
+            .left=equityRegDateString
+      else
+        if fundBusinName=='存入'
+          .step-wrap.step-2
+            if (tAConfirmFlagString=='确认中') && (deductStatusString=='扣款成功')
+              .step-1-wrap.step-index-wrap.active-right
+                .right-bar
+                .index-wrap ￥
+                .step-content 付款
+              .step-2-wrap.step-index-wrap
+                .left-bar
+                .index-wrap
+                  span.mui-icon.mui-icon-checkmarkempty
+                .step-content 确认份额
+            if (tAConfirmFlagString=='确认中') && (deductStatusString=='扣款中' || deductStatusString=='未扣款')
+              .step-1-wrap.step-index-wrap
+                .right-bar
+                .index-wrap ￥
+                .step-content 付款
+              .step-2-wrap.step-index-wrap
+                .left-bar
+                .index-wrap
+                  span.mui-icon.mui-icon-checkmarkempty
+                .step-content 确认份额
+            if (tAConfirmFlagString=='交易成功') && (deductStatusString=='扣款成功')
+              .step-1-wrap.step-index-wrap.active-right
+                .right-bar
+                .index-wrap ￥
+                .step-content 申购
+              .step-2-wrap.step-index-wrap.active-left
+                .left-bar
+                .index-wrap
+                  span.mui-icon.mui-icon-checkmarkempty
+                .step-content 确认
+            if (tAConfirmFlagString=='交易失败')
+              .step-1-wrap.step-index-wrap.active-right
+                .right-bar
+                .index-wrap ￥
+                .step-content 申购
+              .step-2-wrap.step-index-wrap.active-left
+                .left-bar
+                .index-wrap
+                  span.mui-icon.mui-icon-checkmarkempty
+                .step-content 失败
+            if (deductStatusString=='扣款失败')
+              .step-1-wrap.step-index-wrap.active-right
+                .right-bar
+                .index-wrap ￥
+                .step-content 申购
+              .step-2-wrap.step-index-wrap.active-left
+                .left-bar
+                .index-wrap
+                  span.mui-icon.mui-icon-checkmarkempty
+                .step-content 失败
+            if (tAConfirmFlagString=='已撤单')
+              .step-1-wrap.step-index-wrap.active-right
+                .right-bar
+                .index-wrap ￥
+                .step-content 申购
+              .step-2-wrap.step-index-wrap.active-left
+                .left-bar
+                .index-wrap
+                  span.mui-icon.mui-icon-checkmarkempty
+                .step-content 撤单
+          ul.mui-table-view
+            li.mui-table-view-cell
+              .left 基金名称
+              .right=fundName
+            li.mui-table-view-cell
+              .left 申购金额
+              .right=balanceString+'元'
+            li.mui-table-view-cell
+              .left 支付方式
+              .right=bankName+(bankAccount?'(****'+bankAccount.substr(-4,4)+')':'')
+            li.mui-table-view-cell
+              .left=orderDate
+              .right=orderTime
+        else
+          .step-wrap.step-2
+            if (tAConfirmFlagString=='确认中')
+              .step-1-wrap.step-index-wrap.active-right
+                .right-bar
+                .index-wrap ￥
+                .step-content 赎回
+              .step-2-wrap.step-index-wrap
+                .left-bar
+                .index-wrap
+                  span.mui-icon.mui-icon-checkmarkempty
+                .step-content 确认
+            if (tAConfirmFlagString=="交易成功")
+              .step-1-wrap.step-index-wrap.active-right
+                .right-bar
+                .index-wrap ￥
+                .step-content 赎回
+              .step-2-wrap.step-index-wrap.active-left
+                .left-bar
+                .index-wrap
+                  span.mui-icon.mui-icon-checkmarkempty
+                .step-content 确认
+            if (tAConfirmFlagString=='已撤单')
+              .step-1-wrap.step-index-wrap.active-right
+                .right-bar
+                .index-wrap ￥
+                .step-content 赎回
+              .step-2-wrap.step-index-wrap.active-left
+                .left-bar
+                .index-wrap
+                  span.mui-icon.mui-icon-checkmarkempty
+                .step-content 撤单
+            if (tAConfirmFlagString=='交易失败')
+              .step-1-wrap.step-index-wrap.active-right
+                .right-bar
+                .index-wrap ￥
+                .step-content 赎回
+              .step-2-wrap.step-index-wrap.active-left
+                .left-bar
+                .index-wrap
+                  span.mui-icon.mui-icon-checkmarkempty
+                .step-content 失败
+          ul.mui-table-view
+            li.mui-table-view-cell
+              .left 基金名称
+              .right=fundName
+            li.mui-table-view-cell
+              .left 赎回份额
+              .right=sharesString+'份'
+            li.mui-table-view-cell
+              .left 支付方式
+              .right=bankName+(bankAccount?'(****'+bankAccount.substr(-4,4)+')':'')
+            li.mui-table-view-cell
+              .left=orderDate
+              .right=orderTime
+        div.back-wrap
+          if undoStatus == 'true'
+            button#next-btn.mui-btn.mui-btn-warning.center(type='button') 撤单
+            .other-text 15:00之前撤单有效
+        .mui-popup-backdrop
+        .password-popup
+          .password-popup-inner
+            .password-popup-title 请输入交易密码
+            .password-popup-box-wrap
+              .box-item
+                .point
+              .box-item
+                .point
+              .box-item
+                .point
+              .box-item
+                .point
+              .box-item
+                .point
+              .box-item
+                .point
+            .password-popup-input
+              input#password-input(type='number' placeholder='')
+          .password-popup-buttons
+            span.password-popup-button.cancel 取消
+            span.password-popup-button.confirm 确定
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript', src='/static/js/ruifubaoRecordDetail.js')
+

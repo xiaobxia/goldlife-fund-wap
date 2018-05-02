@@ -1,0 +1,55 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 申购结果
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.assets-portfolio-recordDetail
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 申请结果
+    .content-body
+      .step-wrap.step-2
+        .step-1-wrap.step-index-wrap.active-right
+          .right-bar
+          .index-wrap ￥
+          .step-content 赎回
+        .step-2-wrap.step-index-wrap
+          .left-bar
+          .index-wrap
+            span.mui-icon.mui-icon-checkmarkempty
+          .step-content 确认
+      ul.mui-table-view
+        li.mui-table-view-cell
+          .left 组合名称
+          .right=protocolName
+        li.mui-table-view-cell
+          .left 赎回份额
+          .right#shares
+        li.mui-table-view-cell
+          .left 支付方式
+          .right=bankName + (userBankNo ? '(****' + userBankNo.substr(-4, 4) + ')' : '')
+        li.mui-table-view-cell
+          .left=orderDate
+          .right=orderTime
+      ul.mui-table-view.collapse
+        li.mui-table-view-cell.mui-collapse
+          a.mui-navigate-right(href='#') 查看调仓明细
+          .mui-collapse-content
+            each portfolioFund in portfolioFunds
+              .content-item
+                .title=portfolioFund.fundName
+                  span.right 赎回中
+                .explain='金额：-.--元'
+                  span.right='赎回份额:' + Math.round(parseInt(redeemRate)*portfolioFund.enableShares)/100 + '份'
+    a#next-btn.mui-btn.mui-btn-warning.center(type='button') 完成
+    //.other-text 15:00之前撤单有效
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript' src='/static/js/portfolioRedeemResult.js')
+

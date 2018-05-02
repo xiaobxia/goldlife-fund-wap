@@ -1,0 +1,155 @@
+.mui-table-view{
+  padding-left: 0;
+  .mui-table-view-cell{
+    padding: 25px 45px;
+    font-size: 32px;
+    height: 90px;
+    border-top: 1px solid $grey-border-color;
+    color: $brown-text-color;
+    .left{
+      line-height: 1.1;
+      float: left;
+      width: 30%;
+      text-align: left;
+    }
+    .right{
+      float: right;
+      width: 60%;
+      text-align: right;
+      line-height: 1.1;
+    }
+  }
+}
+
+.mui-table-view.change{
+  .mui-table-view-cell{
+    .content-item{
+      position: relative;
+      margin-left: 80px;
+      .tag-yellow{
+        position: absolute;
+        padding: 3px 5px;
+        top: 17px;
+        left: -80px;
+        font-size: 28px;
+        border: 1px solid $yellow;
+        color: $yellow;
+        height: 44px;
+        line-height: 1.1;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+
+.banner {
+  position: relative;
+  padding: 45px 0 55px 0;
+  background-color: #fff;
+  .mui-icon-checkmarkempty {
+    display: block;
+    position: relative;
+    margin: 0 auto 25px auto;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
+    border-radius: 80px;
+    background-color: $main-color;
+  }
+  .explain {
+    color: $brown-text-color;
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
+
+.mui-btn-warning{
+  margin-top: 64px;
+}
+
+
+.other-text{
+  padding: 25px 35px;
+  text-align: center;
+}
+
+
+.mui-backdrop{
+  display: none;
+
+  &.mui-active{
+    display: block;
+  }
+}
+
+.mui-table-view.collapse {
+  padding: 0;
+  background-color: transparent;
+  clear: both;
+  .mui-collapse {
+    padding: 0;
+    height: auto;
+    line-height: 77px;
+    background-color: transparent;
+    color: $main-text-color;
+    text-align: center;
+  }
+  .mui-navigate-right:after {
+    display: inline;
+    position: static;
+    margin-left: .5em;
+    font-size: 26px;
+  }
+  .mui-collapse-content{
+    position: relative;
+    margin: 0;
+    padding: 25px 45px 20px 45px;
+    width: 100%;
+    background-color: #fff;
+    .main-title{
+      margin: 0 0 15px 0;
+      padding: 15px 0;
+      font-weight: $main-font-weight;
+      color: $main-text-color;
+      font-size: 28px;
+      text-align: left;
+      border-bottom: 1px solid $grey-border-color;
+      .right{
+        float: right;
+      }
+    }
+    .explain-text{
+      margin-top: 35px;
+      font-size: 26px;
+      color: $main-text-color;
+      text-align: left;
+      line-height: 1.1;
+    }
+  }
+  .content-item{
+    margin: 0 0 20px 0;
+    text-align: left;
+    .explain{
+      font-size: 26px;
+      color: $main-text-color;
+      line-height: 1.1;
+    }
+    .title {
+      font-size: 32px;
+      color: $brown-text-color;
+      line-height: 1.1;
+      margin-bottom: 15px;
+      .right{
+        width: auto;
+        float: right;
+        color: $main-text-color;
+      }
+    }
+  }
+}
+
+
+

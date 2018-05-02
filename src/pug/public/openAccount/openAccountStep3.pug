@@ -1,0 +1,58 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 开户
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.picker.all.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/professionCode.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.public-openAccount-openAccountStep3
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 开户
+    .content-body
+      .step-wrap
+        .step-1-wrap.step-index-wrap.active-right
+          .right-bar
+          .index-wrap 1
+          .step-content 设置交易密码
+        .step-2-wrap.step-index-wrap.active-both
+          .left-bar
+          .right-bar
+          .index-wrap 2
+          .step-content 绑定银行卡号
+        .step-3-wrap.step-index-wrap.active-left
+          .left-bar
+          .index-wrap 3
+          .step-content 添加开户信息
+      ul.mui-table-view.inside-bottom
+        li#address-btn.mui-table-view-cell
+          a.mui-navigate-right
+            span.label 居住地址
+            span.value#userAddress-text 请选择
+        li.mui-table-view-cell#profession-btn
+          a.mui-navigate-right
+            span.label 职业
+            span.value#profession-text 其它
+        li.mui-table-view-cell#selfSustain-btn
+          a.mui-navigate-right
+            span.label 实际受益人、实际控制人
+            span.value#selfSustain-text 本人
+      form.mui-input-group.hidden#owner-wrap
+        .mui-input-row
+          label 实际受益人
+          input(type='text', placeholder='请填写实际受益人姓名' id="beneficiary-input")
+        .mui-input-row
+          label 实际控制人
+          input(type='text', placeholder='请填写实际控制人姓名' id="owner-input")
+      button#next-btn.mui-btn.mui-btn-warning.center(type='button')
+        | 完成开户
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript', src='/static/lib/mui.picker.all.js')
+    script(type='text/javascript', src='/static/js/openAccountStep3.js')

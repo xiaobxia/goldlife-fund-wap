@@ -1,0 +1,29 @@
+.mui-popup {
+  width: 540px;
+  height: auto;
+  border: 10px;
+  .mui-popup-title{
+    display: none;
+  }
+  .mui-popup-inner{
+    padding: 55px 50px 50px 50px;
+  }
+  .mui-popup-text{
+    color: $main-text-color;
+    font-size: 30px;
+    text-align: left;
+  }
+  .mui-popup-buttons {
+    height: auto;
+    .mui-popup-button {
+      height: 90px;
+      font-size: 36px;
+      line-height: 90px;
+      color: $main-text-color;
+    }
+    .mui-popup-button-bold {
+      font-weight: $main-font-weight;
+      color: rgb(0, 190, 255);
+    }
+  }
+}

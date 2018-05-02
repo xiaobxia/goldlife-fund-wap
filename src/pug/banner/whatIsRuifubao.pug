@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 瑞富宝
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(src='/static/asset/jquery/jquery-3.1.0.min.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript').
+      setAdaptive();
+    style.
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    script(src='/static/lib/jquery/jquery-3.1.0.min.js')
+  body(style='background-color: #F4E2D8').banner-whatIsRuifubao
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 瑞富宝
+    .content-body
+      div( class='div')
+        img(src='/static/asset/whatIsRuifubao.png', alt='', style='width: 100%; display: block')
+        a(class='a' target='_blank', href='/static/asset/ruifuguide.pdf')
+        #buy-btn() 买入
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      $('#buy-btn').on('click', function () {
+        window.location='/page/ruifu/ruifuList'
+      });

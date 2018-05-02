@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    title 购买须知
+    script(type='text/javascript').
+      setAdaptive();
+  body.fund-purchaseNotice
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 购买须知
+    // 申购流程确认界面
+    .content-body
+      .base_div.line_block_div(style='background-color: #ebebeb;')
+        .fund_apply_left(style='background-color: #ebebeb;')
+          span 申购
+        .fund_apply_right(style='background-color: #ebebeb;')
+          span#fund_apply_min_bla 起购金额:
+      .base_div.line_block_div.hide_monetary_fund
+        .fund_operation_title
+          span 申购费率
+      .base_div.line_block_div.hide_monetary_fund
+        table.dataintable
+          tbody#fund_apply_ratio_list
+            tr
+              td.table_block.border_right.title 金额
+              td.table_block 费率
+      .base_div.line_block_div(style='background-color: #ebebeb; display: none;')
+        .title_div(style='height: initial;')
+          .fund_apply_left
+            span 流程确认
+      .base_div.line_block_div.line_block_img
+        img.operation_sure_img(alt='购买确认', src='/static/asset/sglc.jpg')
+      // 赎回流程确认界面
+      .base_div.line_block_div(style='background-color: #ebebeb;')
+        .fund_exceed_left(style='background-color: #ebebeb;')
+          span 赎回
+        .fund_exceed_right(style='background-color: #ebebeb;')
+          span#fund_exceed_limit 最少赎回:份; 最低持有:份
+      .base_div.line_block_div.hide_monetary_fund
+        .fund_operation_title
+          span 赎回费率
+      .base_div.line_block_div.hide_monetary_fund
+        table.dataintable
+          tbody#fund_exceed_ratio_list
+            tr
+              td.table_block.border_right 持有时间
+              td.table_block 费率
+      .base_div.line_block_div(style='background-color: #ebebeb; display: none;')
+        .title_div(style='height: initial;')
+          .fund_apply_left
+            span 流程确认
+      .base_div.line_block_div.line_block_img
+        img#exceed_operation_sure.operation_sure_img(alt='赎回确认', src='/static/asset/shlc_4.jpg')
+
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type ='text/javascript', src = '/static/js/purchaseNotice.js').
+

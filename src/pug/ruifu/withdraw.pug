@@ -1,0 +1,90 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/moment.js')
+    title 提现
+    script(type='text/javascript').
+      setAdaptive();
+  body.ruifu-withdraw
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 提现
+    .content-body
+      .fund-title=fundName
+      ul.mui-table-view.input
+        li.mui-table-view-cell
+          .label
+            .icon(class="SPABANK")
+            .text-block
+              p=result.bankName
+              p='尾号 '+result.bankAccount.substr(-4,4)
+          .placeholder='可用金额'+result.enableSharesString+'元'
+      .mui-input-group
+        .mui-input-row.border
+          label 提现金额
+          input(type='number', placeholder='输入提现金额' id="shares-input")
+          .quick-btn#all-btn 全部
+      ul#select.mui-table-view.select
+        li.mui-table-view-cell.active(data-index-value='1')
+          .title 快速提现
+          .explain 急速到账 当天无收益
+          span.mui-icon.mui-icon-checkmarkempty
+        li.mui-table-view-cell(data-index-value='2')
+          .title 普通提现
+          .explain  2个工作日到账  当日有收益
+          span.mui-icon.mui-icon-checkmarkempty.active
+      ul.mui-table-view
+        li.mui-table-view-cell.border#selectSunBranch-btn
+          a.mui-navigate-right
+            span.label 开户支行名称
+            span.value#vcBankname-text=vcBankname || result.branchBankName
+      .other#xieyi 同意
+        a(href='/page/ruifu/presentagreement') 《快速取现服务协议》
+        if result.fastRedeemRetainCountPerDay!=-1
+          | ，本日快速取现次数剩余
+          span.red-text=result.fastRedeemRetainCountPerDay
+          | 次
+        if result.fastRedeemRetainDayDealMaxValue!=-1
+          | ，本日快速取现剩余额度
+          span.red-text=result.fastRedeemRetainDayDealMaxValue
+          | 元
+        if result.fastRedeemSingleDealMaxValue!=-1
+          |，单笔快速取现限额
+          span.red-text=result.fastRedeemSingleDealMaxValue
+          |元
+      button#next-btn.mui-btn.mui-btn-warning.center(type='button') 确认
+      .company-warn
+        p 基金销售服务由杭州科地瑞富基金销售有限公司提供
+        p 基金历史业绩不预示未来表现，市场有风险，投资需谨慎
+      .mui-popup-backdrop
+      .password-popup
+        .password-popup-inner
+          .password-popup-title 请输入交易密码
+          .password-popup-box-wrap
+            .box-item
+              .point
+            .box-item
+              .point
+            .box-item
+              .point
+            .box-item
+              .point
+            .box-item
+              .point
+            .box-item
+              .point
+          .password-popup-input
+            input#password-input(type='number' placeholder='')
+        .password-popup-buttons
+          span.password-popup-button.cancel 取消
+          span.password-popup-button.confirm 确定
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      var resResult =!{JSON.stringify(result)};
+    script(type='text/javascript', src='/static/js/ruifubaoWithdraw.js')

@@ -1,0 +1,99 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 我的账户
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.assets-index
+    header#header.mui-bar.mui-bar-nav.yellow
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 我的账户
+    .content-body
+      .my-detail-info-wrap
+        h5 总资产（元）
+        h1=totalWorthValueString || '0.00'
+        p=totalInTransitAmountString || ''
+        .my-detail
+          .sub-wrap
+            p 昨日收益（元）
+            p=totalTodayIncome || '0.00'
+          .vertical
+          .sub-wrap
+            p 累计收益（元）
+            p=totalAccumIncomeString || '0.00'
+      ul.mui-table-view.list
+        a(href='/page/assets/ruifubao')
+          li.mui-table-view-cell
+            .title 瑞富宝
+              span.right=wallet.totalWorthValueString
+            .explain
+              if wallet.inTransitNumString
+                span.red-text=wallet.inTransitNumString
+              else if wallet.fundsCount
+                span='持有'+wallet.fundsCount+'只瑞富宝'
+              else
+                span 支持实时赎回
+              span.right 昨日收益：
+                span(class=!wallet.totalTodayIncome||wallet.totalTodayIncome==0?'':wallet.totalTodayIncome<0?'green-text':'red-text')=wallet.totalTodayIncomeString || '0.00'
+            span.mui-navigate-right
+        a(href='/page/assets/portfolio')
+          li.mui-table-view-cell
+            .title 持有组合
+              span.right=portfolios.portfolioWorthValueString
+            .explain
+              if portfolios.inTransitNumString
+                span.red-text=portfolios.inTransitNumString
+              else if portfolios.portfolioNum
+                span='持有'+portfolios.portfolioNum+'只基金组合'
+              else
+                span 您还未购买基金组合
+              span.right 昨日收益：
+                span(class=!portfolios.portfolioTodayIncome||portfolios.portfolioTodayIncome==0?'':portfolios.portfolioTodayIncome<0?'green-text':'red-text')=portfolios.portfolioTodayIncomeString || '0.00'
+            span.mui-navigate-right
+        a(href='/page/assets/fund')
+          li.mui-table-view-cell
+            .title  持有基金
+              span.right=fund.totalWorthValueString
+            .explain
+              if fund.inTransitNumString
+                span.red-text=fund.inTransitNumString
+              else if fund.fundsCount
+                span='持有'+fund.fundsCount+'只基金'
+              else
+                span 您还未购买基金产品
+              span.right 昨日收益：
+                span(class=!fund.totalTodayIncome || fund.totalTodayIncome==0?'':fund.totalTodayIncome<0?'green-text':'red-text')=fund.totalTodayIncomeString || '0.00'
+            span.mui-navigate-right
+      ul.mui-table-view
+        a(href='/page/user/castSurely')
+          li.mui-table-view-cell
+            span.mui-navigate-right
+              span.label 定投管理
+        a(id=risk.have_tested === true?'to-result':"to-risk")
+          li.mui-table-view-cell
+            span.mui-navigate-right
+              span.label 风险测评
+              if risk.have_tested === true
+                span.value=risk.invest_risk_tolerance_desc
+              else
+                span.value 未评测
+      ul.mui-table-view
+        a(href='/page/user/bankcardList')
+          li.mui-table-view-cell
+            span.mui-navigate-right
+              span.label 银行卡管理
+        a(href='/page/user/userEdit')
+          li.mui-table-view-cell
+            span.mui-navigate-right
+              span.label 账户设置
+      .company-warn
+        p 基金销售服务由杭州科地瑞富基金销售有限公司提供
+        p 基金历史业绩不预示未来表现，市场有风险，投资需谨慎
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript', src='/static/js/assetIndex.js')

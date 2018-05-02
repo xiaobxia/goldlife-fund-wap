@@ -1,0 +1,82 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 组合赎回
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/moment.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.assets-portfolio-redeem
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 组合赎回
+    .content-body
+      ul.mui-table-view
+        li.mui-table-view-cell
+          span.label 组合名称
+          span.placeholder.brown=protocolName
+        li.mui-table-view-cell
+          span.label 赎回银行卡
+          span.placeholder.brown=bankName + '(****' + userBankNo.substr(-4, 4) + ')'
+        li.mui-table-view-cell#selectSunBranch-btn
+          a.mui-navigate-right
+            span.label 支行
+            p.value=vcBankname || branchBankName
+      ul.mui-table-view.transparent
+        li.mui-table-view-cell='可赎回份额' + enableShare + '份'
+      .mui-input-group
+        .mui-input-row
+          label 赎回比例(%)
+          input(type='number', placeholder='请输入数字1到100' id="redeem-input")
+      .other
+        span.warn-icon i
+        | 为了保障您的资金正常赎回到账，请检查下银行卡支行信息是否正确
+      ul.mui-table-view.collapse
+        li.mui-table-view-cell.mui-collapse
+          a.mui-navigate-right(href='#') 赎回明细
+          .mui-collapse-content
+            h3.main-title
+              span 组合基金
+              span.right 赎回份额
+            each portfolioFund in portfolioFunds
+              .content-item
+                .title=portfolioFund.fundName
+                  span.right=0 + '份'
+                .explain=portfolioFund.fCode
+            //.explain-text
+              span.warn-icon i
+              | 以上为估值，请以实际到账为准
+      button#redeem-btn.mui-btn.mui-btn-warning.center(type='button')
+        | 确认赎回
+      .company-warn
+        p 基金销售服务由杭州科地瑞富基金销售有限公司提供
+        p 基金历史业绩不预示未来表现，市场有风险，投资需谨慎
+    .mui-popup-backdrop
+    .password-popup
+      .password-popup-inner
+        .password-popup-title 请输入交易密码
+        .password-popup-box-wrap
+          .box-item
+            .point
+          .box-item
+            .point
+          .box-item
+            .point
+          .box-item
+            .point
+          .box-item
+            .point
+          .box-item
+            .point
+        .password-popup-input
+          input#password-input(type='number'  placeholder='')
+      .password-popup-buttons
+        span.password-popup-button.cancel 取消
+        span.password-popup-button.confirm 确定
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript', src='/static/js/portfolioRedeem.js')

@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no')
+    title 公司简介
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(src='/static/lib/jquery-3.1.0.min.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body(style='background-color:white;margin: 0').banner-companyProfile
+    header#header.mui-bar.mui-bar-nav.white
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 公司简介
+    .content-body
+      div(style='',class='top')
+        img(src='/static/asset/公司简介_top.jpg', alt='', style='width: 100%')
+      .show_btn
+        ul
+          li.zhizhao_btn
+            img(src='/static/asset/公司简介_营业执照.jpg', style='width: 100%', alt='')
+          li.zhengshu_btn
+            img(src='/static/asset/公司简介_证书.jpg', style='width: 100%', alt='')
+          li.bank_btn
+            img(src='/static/asset/公司简介_银行.jpg', style='width: 100%', alt='')
+      div
+        img(src='/static/asset/公司简介_but.jpg', alt='', style='width: 100%')
+      .layout
+        .close_btn
+        .zhizhao
+        .zhengshu
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type = 'text/javascript', src='/static/js/companyProfile.js')

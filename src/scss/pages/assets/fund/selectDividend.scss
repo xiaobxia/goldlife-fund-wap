@@ -1,0 +1,58 @@
+.mui-table-view.transparent {
+  text-align: left;
+  padding-left: 35px;
+  .mui-table-view-cell {
+    height: 80px;
+    line-height: 80px;
+    font-size: 30px;
+    color: rgb(100, 100, 100);
+  }
+}
+
+.mui-table-view.select {
+  padding-left: 35px;
+  .mui-icon-checkmarkempty {
+    display: none;
+  }
+  .mui-table-view-cell {
+    position: relative;
+    height: auto;
+    padding: 30px 0;
+    .title {
+      margin-bottom: 15px;
+    }
+    .explain {
+      max-width: 500px;
+      font-size: 24px;
+    }
+    &.active {
+      .mui-icon-checkmarkempty {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto 0;
+        color: $main-color;
+        width: 90px;
+        height: 90px;
+        font-size: 90px;
+      }
+    }
+  }
+
+}
+
+.explain-text{
+  margin-bottom: 90px;
+  padding: 25px 35px;
+  font-size: 26px;
+}
+
+.mui-btn-warning {
+  width: 640px;
+}
+
+.company-warn{
+  margin-top: 430px;
+}

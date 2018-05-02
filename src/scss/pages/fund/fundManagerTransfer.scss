@@ -1,0 +1,313 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  padding-top: 90px;
+}
+.title_div {
+  font-size: 28px;
+  height: 70px;
+  background-color: #ebebeb;
+}
+
+.managerIntro{
+  text-align: left;
+  /*line-height: 24px;*/
+  min-height: 70px;
+  background-color: #ffffff;
+  padding:32px 0;
+}
+
+.padding_name {
+  height: 100px;
+  line-height:100px;
+}
+
+.font1{
+  color:#333333;
+  font-family: "Microsoft YaHei";
+  font-size: 25px;
+}
+
+.font4{
+  color:#333333;
+  font-family: "Microsoft YaHei";
+  font-size: 25px;
+}
+
+.font2{
+  color:#ffffff;
+  font-family: "Microsoft YaHei";
+  font-size: 28px;
+}
+
+.font3{
+  color:#ff0000;
+  font-family: "Microsoft YaHei";
+  font-size: 25px;
+}
+
+.font5{
+  color:#22ac38;
+  font-family: "Microsoft YaHei";
+  font-size: 25px;
+}
+
+.font6{
+  color:#333333;
+  font-family: "Microsoft YaHei";
+  font-size: 30px;
+}
+
+.font7{
+  color:#95776F;
+  font-family: "Microsoft YaHei";
+  font-size: 33px;
+}
+
+.font8{
+  color:#ff0000;
+  font-family: "Microsoft YaHei";
+  font-size: 30px;
+}
+
+.font9{
+  color:#22ac38;
+  font-family: "Microsoft YaHei";
+  font-size: 30px;
+}
+
+.font10{
+  color:#333333;
+  font-family: "Microsoft YaHei";
+  font-size: 30px;
+}
+
+.fundManagerEx{
+  color: #ffffff;
+  font-family: "Microsoft YaHei";
+  text-align: left;
+}
+
+.fundManagerEx2{
+  color: #ffffff;
+  font-family: "Microsoft YaHei";
+  background-color: #ffffff;
+  font-size:28px;
+}
+
+.fund_space {
+  height: 20px;
+}
+
+.invest_left{
+  font-size:28px;
+}
+.fund_apply_left {
+  width: 30%;
+  display: inline-block;
+  text-align: left;
+  padding: 8px 0px;
+  padding-left: 20px;
+  float: left;
+  min-height: 35px;
+}
+
+.fund_apply_right {
+  width: 70%;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0px;
+  float: left;
+  min-height: 35px;
+}
+
+.fund_operation_title {
+  font-size: 32px;
+  height: 35px;
+  background-color: #FFAA01;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0px;
+  color: #ffffff;
+}
+
+.left_border {
+  border-left: 1px solid #cccccc;
+}
+
+.border_top {
+  border-top: 1px solid #cccccc;
+}
+
+.border_right {
+  border-right: 1px solid #cccccc;
+}
+
+.border_bottom {
+  border-bottom: 1px solid #cccccc;
+}
+
+.fund_exceed_left {
+  width: 20%;
+  display: inline-block;
+  text-align: left;
+  padding: 8px 0px;
+  padding-left: 20px;
+  float: left;
+}
+
+.fund_exceed_right {
+  width: 80%;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0px;
+  float: left;
+}
+
+.white_font {
+  color: #ffffff;
+}
+
+.line_block_div {
+  overflow: auto;
+  margin-bottom: 0px;
+}
+
+.dataintable {
+  border-collapse: collapse;
+  border: 1px solid #cccccc;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width:0px;
+  border-bottom-width: 0px;
+  width: 100%;
+  padding: 0;
+  /*display: table;*/
+  table-layout: fixed;
+  text-align: center;
+}
+
+tr {
+  vertical-align: inherit;
+  /*display: flex;*/
+}
+
+table.dataintable td {
+  /*vertical-align: middle;*/
+}
+
+.invest_block_left1 {
+  height: 70px;
+  /*display: inline-block;*/
+  font-size: 28px;
+  color: #ffffff;
+  vertical-align: middle;
+  align-items: center;
+  /*flex: 54;*/
+  width:14.4%;
+  height: 20px;
+  /*line-height: 70px;*/
+  text-align: center;
+}
+
+.invest_block_middle1 {
+  height: 35px;
+  font-size: 28px;
+  width:61.6%;
+  align-items: center;
+  vertical-align: bottom;
+  color:#95776F;
+  line-height:45px;
+}
+
+.invest_block_right1 {
+  min-height: 35px;
+  /*display: inline-block;*/
+  font-size: 28px;
+  /*color: #ffffff;*/
+  width: 24%;
+  align-items: center;
+  vertical-align: bottom;
+  /*flex:90;*/
+  height: 10px;
+}
+
+.invest_block_left2 {
+  min-height: 35px;
+  /*display: inline-block;*/
+  font-size: 28px;
+  color: #ffffff;
+  align-items: center;
+  /*flex: 54;*/
+  width:14.4%;
+  height: 10px;
+}
+
+.invest_block_middle2 {
+  height: 35px;
+  /*display: inline-block;*/
+  font-size: 28px;
+  /*color: #ffffff;*/
+  align-items: center;
+  width:61.6%;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+.invest_block_right2 {
+  min-height: 35px;
+  /*display: inline-block;*/
+  font-size: 28px;
+  /*color: #ffffff;*/
+  vertical-align: middle;
+  align-items: center;
+  /*flex:90;*/
+  width: 24%;
+  height: 10px;
+  line-height: 50px;
+}
+
+.table_block{
+  min-height: 35px;
+  display: inline-block;
+  color: #ffffff;
+  align-items: center;
+  flex:1;
+  height: 10px;line-height: 35px;
+}
+
+.table_block_left{
+  min-height: 35px;
+  display: inline-block;
+  align-items: center;
+  flex:3;
+  height: 10px;line-height: 35px;
+}
+
+.table_block_middle{
+  min-height: 35px;
+  display: inline-block;
+  align-items: center;
+  flex:4;
+  height: 10px;line-height: 35px;
+}
+
+.table_block_right{
+  min-height: 35px;
+  display: inline-block;
+  align-items: center;
+  flex:2;
+  height: 10px;line-height: 35px;
+}
+
+.operation_sure_img {
+  width: 100%;
+  /*height: 100%;*/
+  /*objec-fit: cover;*/
+  display: block;
+}
+

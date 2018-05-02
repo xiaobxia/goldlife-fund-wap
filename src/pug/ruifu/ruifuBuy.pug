@@ -1,0 +1,109 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/moment.js')
+    title 买入
+    script(type='text/javascript').
+      setAdaptive();
+  body.fund-fundBuy.white.buy
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 买入
+      a.mui-pull-right.link-a(href='/page/public/quotas') 限额说明
+    .content-body
+      .ruifuBuy_title=fundName
+        span=fundCode
+      .mui-input-row
+        label 购买金额
+        input#balance-input(type='number', placeholder='最低购买金额'+(limits.length>0?limits[0].minValue:0)+'元')
+      .ruifuBuy_title 支付方式
+      ul.mui-table-view
+        li.mui-table-view-cell#select-pay
+          .icon(class=payWay[recommendIndex].payType=='BANK'?payWay[recommendIndex].bankCode:(payWay[recommendIndex].payType=='OFFLINE'?'OFFLINE':'T0'))=payWay[recommendIndex].payType=='T0'?'￥':''
+          .text-block
+            .title=payWay[recommendIndex].payName+'(****'+payWay[recommendIndex].bankNo.substr(-4,4)+')'
+            if (payWay[recommendIndex].payType=='BANK')
+              if (payWay[recommendIndex].singleDealMaxValue===-1 && payWay[recommendIndex].dayDealRetainMaxValue===-1 && payWay[recommendIndex].monthDealRetainMaxValue===-1)
+                .content 单笔不限额
+              else
+                .content=(payWay[recommendIndex].singleDealMaxValue===-1?'银行单笔不限额，':'银行单笔限额'+payWay[recommendIndex].singleDealMaxValue+'元，')+(payWay[recommendIndex].dayDealRetainMaxValue===-1?'单日不限额，':'单日剩余额度'+payWay[recommendIndex].dayDealRetainMaxValue+'元，')+(payWay[recommendIndex].monthDealRetainMaxValue===-1?'单月不限额':'单月剩余额度'+payWay[recommendIndex].monthDealRetainMaxValue+'元')
+            else if (payWay[recommendIndex].payType=='T0')
+              .content='可用余额'+payWay[recommendIndex].balance
+            else
+              if payWay[recommendIndex].singleDealMinValue==-1
+                .content 单笔不限额
+              else
+                .content='单笔支付金额不少于'+payWay[recommendIndex].singleDealMinValue+'元'
+          span.mui-navigate-right
+      .offline-info(class=payWay[recommendIndex].payType=='OFFLINE'?'active':'')
+        .title 收款账户信息
+        .content 银行户名
+          span 杭州科地瑞富基金销售有限公司
+        .content 账    号
+          span 9516 0157 8700 00143
+        .content 开户支行
+          span 浦发银行杭州武林支行
+        .content  银行行号
+          span 3103 3100 0092
+        .other 请先下单购买后，使用绑定的银行卡进行汇款支付。15:00之前汇款原购买申请有效，15:00之后汇款需要重新提交一次申请。
+          span.warn-icon i
+      button#buy-btn.mui-btn.mui-btn-warning.center(type='button') 买入
+    .company-warn
+      p 基金销售服务由杭州科地瑞富基金销售有限公司提供
+      p 基金历史业绩不预示未来表现，市场有风险，投资需谨慎
+    .mui-popover.mui-popover-bottom
+        .mui-popover-arrow.mui-bottom 请选择支付方式
+          .mui-icon.mui-icon-closeempty
+        ul.mui-table-view
+          each payWayItem,index in payWay
+            li.mui-table-view-cell(class=index==recommendIndex?'active':'' data-index=index data-canuse=payWayItem.canUse===true?'true':'false')
+              .icon(class=payWayItem.payType=='BANK'?payWayItem.bankCode:(payWayItem.payType=='OFFLINE'?'OFFLINE':'T0'))=payWayItem.payType=='T0'?'￥':''
+              .text-block
+                .title=payWayItem.payName+'(****'+payWayItem.bankNo.substr(-4,4)+')'
+                if (payWayItem.payType=='BANK')
+                  if (payWayItem.singleDealMaxValue===-1 && payWayItem.dayDealRetainMaxValue===-1 && payWayItem.monthDealRetainMaxValue===-1)
+                    .content 单笔不限额
+                  else
+                    .content=(payWayItem.singleDealMaxValue===-1?'银行单笔不限额，':'银行单笔限额'+payWayItem.singleDealMaxValue+'元，')+(payWayItem.dayDealRetainMaxValue===-1?'单日不限额，':'单日剩余额度'+payWayItem.dayDealRetainMaxValue+'元，')+(payWayItem.monthDealRetainMaxValue===-1?'单月不限额':'单月剩余额度'+payWayItem.monthDealRetainMaxValue+'元')
+                else if (payWayItem.payType=='T0')
+                  .content='可用余额'+payWayItem.balance
+                else
+                  if payWayItem.singleDealMinValue==-1
+                    .content 单笔不限额
+                  else
+                    .content='单笔支付金额不少于'+payWayItem.singleDealMinValue+'元'
+              span.mui-icon.mui-icon-checkmarkempty
+    .mui-popup-backdrop
+    .password-popup
+      .password-popup-inner
+        .password-popup-title 请输入交易密码
+        .password-popup-box-wrap
+          .box-item
+            .point
+          .box-item
+            .point
+          .box-item
+            .point
+          .box-item
+            .point
+          .box-item
+            .point
+          .box-item
+            .point
+        .password-popup-input
+          input#password-input(type='number' placeholder='')
+      .password-popup-buttons
+        span.password-popup-button.cancel 取消
+        span.password-popup-button.confirm 确定
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      var payWay = !{JSON.stringify(payWay)}
+      var limits = !{JSON.stringify(limits)}
+      var recommendIndex = #{recommendIndex};
+    script(type='text/javascript', src='/static/js/ruifubaoBuy.js')

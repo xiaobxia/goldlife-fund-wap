@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Title
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.public-search-index
+    header#header.mui-bar.mui-bar-nav
+      .mui-input-row.mui-search
+        input#search-input.mui-input-clear(type='search', placeholder='基金名称/代码/拼音首字母')
+      button#cancel-btn.mui-btn.mui-btn-link.mui-pull-right 取消
+    .content-body
+      .history-wrap.hidden
+        | 搜索历史
+        button.mui-btn.mui-btn-link#clear 清除历史
+      ul.mui-table-view.large.top-border#list
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript', src='/static/js/search.js')

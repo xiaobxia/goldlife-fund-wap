@@ -1,0 +1,499 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: "Helvetica";
+  padding-top: 90px;
+}
+
+//
+//.occlusion{
+//  background-color:white;
+//  position: fixed;
+//  left: 0;
+//  top: 0;
+//  right: 0;
+//  bottom: 0;
+//  z-index: 100;
+//}
+.download {
+  height: 79px;
+  background-color: #777777;
+  //background-color: #0d0d0d;
+  //opacity: 0.5;
+  height: 88px;
+  padding-left: 122px;
+}
+
+.download div {
+  font-size: 30px;
+  color: white;
+  line-height: 88px;
+}
+
+.download_icon {
+  position: absolute;
+  top: 22px;
+  left: 55px;
+}
+
+.download_link {
+  display: block;
+  height: 43px;
+  width: 152px;
+  position: absolute;
+  top: 20px;
+  right: 84px;
+  //background: url('../img/download_btn.jpg');
+  background-size: cover;
+}
+
+.download_close {
+  display: block;
+  width: 46px;
+  height: 43px;
+  position: absolute;
+  top: 20px;
+  right: 13px;
+  //background: url('../asset/download_r.jpg');
+  background-size: cover;
+}
+
+.profit {
+  height: 259px;
+  border-bottom: 1px solid #CCCCCC;
+  background-color: white;
+  padding-left: 43px;
+  position: relative;
+}
+
+.profit-t {
+  font-size: 32px;
+  line-height: 106px;
+  color: #957870;
+  font-weight: normal;
+}
+
+.profit-m {
+  ul {
+    li {
+      float: left;
+      list-style: none;
+      height: 86px;
+      font-size: 50px;
+      color: #F3333E;
+      line-height: 86px;
+      font-family: "Helvetica";
+    }
+  }
+}
+
+.profit-m ul li a {
+  font-size: 25px;
+  //color: #F3333E;
+  text-decoration: none;
+}
+
+.profit-m ul li:nth-child(1) {
+  position: absolute;
+  left: 47px;
+  top: 110px;
+}
+
+.profit-m ul li:nth-child(2) {
+  position: absolute;
+  left: 440px;
+  top: 110px;
+}
+
+.profit-m ul li:nth-child(1) a {
+
+}
+
+.profit-m ul li:nth-child(2) a {
+
+}
+
+.profit-b {
+  position: absolute;
+  left: 47px;
+  top: 190px;
+  ul {
+    li {
+      float: left;
+      list-style: none;
+      height: 53px;
+      font-size: 28px;
+      color: #939192;
+      line-height: 53px;
+    }
+  }
+}
+
+.profit-b ul li:nth-child(1) {
+  padding-right: 190px;
+}
+
+.profit_day {
+  height: 90px;
+  background-color: white;
+  padding-left: 43px;
+  ul {
+    li {
+      float: left;
+      list-style: none;
+      height: 90px;
+      font-size: 26px;
+      line-height: 90px;
+      display: inline;
+    }
+  }
+}
+
+.profit_day ul li:nth-child(1) {
+  padding-right: 16px;
+  color: #929091
+}
+
+.profit_day ul li:nth-child(2) {
+  color: #F3333E;
+  padding-right: 220px;
+}
+
+.profit_day ul li:nth-child(3) {
+  color: #929091
+}
+
+.profit_main {
+  background-color: white;
+  margin-top: 18px;
+}
+
+.profit_main_a {
+  padding-left: 43px;
+  height: 87px;
+  border-bottom:1px solid #CCCCCC;
+}
+
+.profit_main_a div:nth-child(1) {
+  font-size: 28px;
+  line-height: 87px;
+  color: #95796D;
+  float: left;
+  margin-right: 390px;
+}
+
+.profit_main_a div:nth-child(2) {
+  font-size: 22px;
+  line-height: 87px;
+  color: #929091;
+  float: left;
+}
+
+.profit_main_a_con {
+  padding: 24px 34px 31px 41px;
+  font-size: 22px;
+  border-bottom: 1px solid #CCCCCC;
+  color: #808080;
+}
+
+.profit_main_charts {
+  padding-bottom: 35px;
+}
+
+.profit_main_charts div:nth-child(1) {
+  padding-left: 43px;
+  font-size: 25px;
+  color: #95776D;
+  line-height: 97px;
+  height: 97px;
+}
+
+.profit_main_charts div:nth-child(2) {
+  height: 512px;
+  //background-color: deepskyblue;
+}
+
+.charts_btn {
+  margin: 20px auto 0;
+}
+
+.charts_btn ul {
+  //margin:0 auto;
+  //border-radius: 0.5rem;
+  //width: 4.84rem;
+  //height: 0.66rem;
+  //border: 0.01rem solid #929091;
+  //overflow: hidden;
+  //border: 0.01rem solid red;
+
+  margin: 0 auto;
+  border-radius: 50px;
+  //width: 4.85rem;
+  height: 66px;
+  margin-left: 132.5px;
+}
+
+.charts_btn ul li {
+  width: 120px;
+  height: 66px;
+  font-size: 22px;
+  float: left;
+  line-height: 66px;
+  list-style: none;
+  text-align: center;
+  color: #929091;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.charts_btn ul li:nth-child(1) {
+  border-top: 1px solid #929091;
+  border-right: 1px solid #929091;
+  border-bottom: 1px solid #929091;
+  border-left: 1px solid #929091;
+  border-radius: 50px 0 0 50px;
+}
+
+.charts_btn ul li:nth-child(2) {
+  border-top: 1px solid #929091;
+  border-right: 1px solid #929091;
+  border-bottom: 1px solid #929091;
+}
+
+.charts_btn ul li:nth-child(3) {
+  border-top: 1px solid #929091;
+  border-right: 1px solid #929091;
+  border-bottom: 1px solid #929091;
+}
+
+.charts_btn ul li:nth-child(4) {
+  border-top: 1px solid #929091;
+  border-right: 1px solid #929091;
+  border-bottom: 1px solid #929091;
+  border-radius: 0 50px 50px 0;
+}
+
+.charts_btn ul .btn_active {
+  background-color: #FFAC12;
+  color: white;
+  border-color: #FFAC12 !important;
+}
+
+.profit_list_t {
+  height: 87px;
+  //border-bottom: 0.01rem solid #CCCCCC;
+  background-color: white;
+  margin-top: 15px;
+}
+
+.profit_list_t div:nth-child(1) {
+  font-size: 29px;
+  color: #957870;
+  line-height: 87px;
+  padding-left: 43px;
+  //border-bottom: 0.01rem solid #929091;
+}
+
+.list_data ul {
+
+}
+
+.list_data ul li {
+  height: 121px;
+  position: relative;
+  background-color: white;
+  border-top: 1px solid #929091;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.list_data .name {
+  font-size: 26px;
+  color: #9E837C;
+  position: absolute;
+  top: 25px;
+  left: 43px;
+}
+
+.list_data .type_num {
+  font-size: 21px;
+  color: #929091;
+  position: absolute;
+  top: 70px;
+  left: 43px;
+}
+
+.list_data .proportion {
+  font-size:25px;
+  color: #929091;
+  position: absolute;
+  top: 46px;
+  right: 55px;
+}
+
+.list_data .list_icon {
+  width: 17px;
+  height: 32px;
+  background-image: url('/static/asset/icon.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 46px;
+  right: 25px;
+}
+
+.transaction {
+  width: 750px;
+  height: 789px;
+  margin-top: 15px;
+}
+
+.transaction img {
+  width: 750px;
+  height: 789px;
+}
+
+.buy_btn {
+  height: 95px;
+  a {
+    display: block;
+    width: 100%;
+    height: 95px;
+    font-size: 34px;
+    color: white;
+    background-color: #FFAA01;
+    line-height: 95px;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+.warehouse_list_t {
+  height: 87px;
+  border-bottom: 1px solid #929091;
+  background-color: white;
+  margin-top: 15px;
+  position: relative;
+}
+
+.warehouse_list_t div:nth-child(1) {
+  font-size: 29px;
+  color: #957870;
+  line-height: 87px;
+  padding-left: 43px;
+  //border-bottom: 0.01rem solid #929091;
+}
+
+.warehouse_list_t div:nth-child(2) {
+  font-size: 23px;
+  color: #929091;
+  line-height: 87px;
+  font-family: "Microsoft YaHei";
+  position: absolute;
+  right: 40px;
+  top: 0;
+  //border-bottom: 0.01rem solid #929091;
+}
+
+.warehouse_list_con {
+  font-size: 21px;
+  line-height: 29px;
+  color: #929091;
+  padding: 20px 20px 20px 43px;
+  background-color: #fff;
+}
+
+.warehouse_list_b .list_data ul {
+
+}
+
+.warehouse_list_b .list_data ul li {
+  height: 121px;
+  position: relative;
+  background-color: white;
+  border-top: 1px solid #929091;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.warehouse_list_b .list_data .name {
+  font-size: 26px;
+  color: #9E837C;
+  position: absolute;
+  top: 25px;
+  left: 43px;
+}
+
+.warehouse_list_b .list_data .type_num {
+  font-size: 21px;
+  color: #929091;
+  position: absolute;
+  top: 70px;
+  left: 43px;
+}
+
+.warehouse_list_b .list_data .proportion {
+  font-size: 25px;
+  color: #929091;
+  position: absolute;
+  top: 46px;
+  right: 55px;
+}
+
+.list_arrow {
+  width: 35px;
+  height: 31px;
+  background: url('/static/asset/arrow.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 46px;
+  right: 166px;
+}
+
+.warehouse_list_b .list_data .proportion_old {
+  font-size: 25px;
+  color: #929091;
+  position: absolute;
+  top: 46px;
+  right: 250px;
+}
+
+.warehouse_list_b .list_data .list_icon {
+  width: 17px;
+  height: 32px;
+  background-image: url('/static/asset/icon.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 46px;
+  right: 25px;
+}
+
+.warehouse_list .warehouse_btn {
+  height: 75px;
+  width: 100%;
+  font-size: 26px;
+  color: #FFAA01;
+  line-height: 75px;
+  text-align: center;
+  background-color: #fff;
+  border-top: 1px solid #929091;
+}
+
+.bum_btn{
+  height: 96px;
+  position: fixed;
+  bottom: 0;
+  width: 750px;
+  z-index: 99;
+}
+.bum_btn div{
+  float: left;
+  text-align: center;
+}
+
+.bum_btn div:nth-child(1){
+  height: 96px;
+  width: 100%;
+  line-height: 96px;
+  color: #fff;
+  background-color: #FFAA01;
+}

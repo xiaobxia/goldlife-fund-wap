@@ -1,0 +1,22 @@
+.mui-btn-warning{
+  padding: 0 90px;
+  height: 90px;
+  background-color: $main-color;
+  color: #fff;
+  font-size: 34px;
+  border-radius: 90px;
+  font-weight: $main-font-weight;
+  &.center{
+    display: block;
+    width: 640px;
+    line-height: 90px;
+    position: relative;
+    margin: 0 auto;
+  }
+  &.disabled{
+    background-color: $grey-background-color;
+    border: 1px solid $grey-border-color;
+
+
+  }
+}

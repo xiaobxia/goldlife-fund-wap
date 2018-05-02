@@ -1,0 +1,198 @@
+
+/**
+ * Created by Garry King on 2016/11/21.
+ */
+/*common*/
+
+
+//* {
+//  margin: 0;
+//  padding: 0;
+//}
+
+body {
+  font-family: "Microsoft YaHei";
+  padding-top: 90px;
+}
+
+//html, body, div, p, li, a, ul, span, input {
+//  margin: 0;
+//  padding: 0;
+//}
+
+body{
+  font-family: "Helvetica";
+}
+/*page*/
+.table1 tr td {
+  padding: 21px 0px;
+  width:15%;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  border-top: 0px;
+}
+
+td img {
+  height: 50%;
+}
+
+.fund_type{
+  font-size: 26px;
+  td{
+    //margin: 0 3%;
+    display: inline-block;
+    color:#BAB0AE;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+  }
+}
+.fund_list{
+  margin-top: 11px;
+}
+.fund_list thead {
+  //background-color: $theme-color;
+  font-size: 26px;
+  background-color: #fff;
+}
+
+.fund_list tbody {
+  background-color: white;
+}
+
+.fund_list tbody tr {
+  border-top: 1px solid #ddd;
+  width: 100%;
+  height: 129px;
+}
+
+.fund_list th {
+  padding: 21px 0;
+  font-weight: normal;
+}
+
+.font16 {
+  font-size: 32px;
+}
+
+.toLeft {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.toRight {
+  text-align: right;
+  padding-left: 10px;
+}
+.bigRed {
+  color: red;
+  font-size: 32px;
+  //font-weight: bold;
+}
+
+.bigGreen {
+  color: green;
+  font-size: 32px;
+  //font-weight: bold;
+}
+
+.bigGree{
+  color: #696969;
+  font-size: 32px;
+}
+.bigBlack {
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+th .border-right {
+  //border-right: 1px solid #fff;
+}
+
+td .border-right {
+  //border-right: 1px solid #ddd;
+}
+
+.date-select-wrap {
+  height: 52px;
+}
+
+.date-select {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  background: #ebebeb;
+  border-top: 1px solid #ddd;
+}
+
+.date-select ul {
+  width: 90%;
+  height: 30px;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 10px auto 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.date-select ul li {
+  width: 20%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 30px;
+  line-height: 30px;
+  background: #fff;
+  list-style: none;
+  border-left: 1px solid #ddd;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.date-select ul li:first-child {
+  border-left: 0;
+}
+
+.date-select ul li.selected {
+  background: #999;
+  color: #fff;
+}
+
+.page-end {
+  font-size: 32px;
+  color: #999;
+}
+
+.fund_type .selected {
+  color: #967870;
+  border-bottom:1px solid #FFAA01;
+}
+
+.table1{
+  background-color: white;
+  font-size: 26px;
+  position: fixed;
+}
+
+.table1_div{
+  width: 100%;
+  height: 58px;
+}
+
+#fund_detail{
+  font-size: 33px !important;
+}
+p{
+  font-size: 33px !important;
+}

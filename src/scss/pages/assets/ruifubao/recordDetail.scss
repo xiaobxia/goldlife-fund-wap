@@ -1,0 +1,59 @@
+.mui-table-view{
+  padding-left: 0;
+  .mui-table-view-cell{
+    padding: 0;
+    height: 88px;
+    line-height: 88px;
+    text-align: center;
+    .left{
+      float: left;
+      width: 30%;
+    }
+    .right{
+      float: right;
+      width: 70%;
+    }
+  }
+}
+
+
+.mui-btn-warning{
+  margin-top: 64px;
+}
+
+
+.other-text{
+  padding: 25px 35px;
+  text-align: center;
+}
+
+
+.mui-backdrop{
+  display: none;
+
+  &.mui-active{
+    display: block;
+  }
+}
+
+.banner {
+  position: relative;
+  padding: 45px 0 55px 0;
+  background-color: #fff;
+  .mui-icon-checkmarkempty {
+    display: block;
+    position: relative;
+    margin: 0 auto 25px auto;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
+    border-radius: 80px;
+    background-color: $main-color;
+  }
+  .explain {
+    color: $brown-text-color;
+    font-size: 32px;
+    text-align: center;
+  }
+}

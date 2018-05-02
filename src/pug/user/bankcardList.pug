@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    title 我的银行卡
+    script(type='text/javascript').
+      setAdaptive();
+  body.user-bankcardList
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 我的银行卡
+    .content-body
+      div.nobank
+      each bank,index in bankcardList.banks
+        .bankcard(onclick='openURL(' + index + ')')
+          div(class='font1')=bank.bankName
+          div(class='font2') 尾号
+            span(class='font3')=bank.userBankNo.substr(bank.userBankNo.length - 4)
+          span.icon(class=bank.bankCode)
+  script(type='text/javascript', src='/static/js/commonBody.js')
+  script(type='text/javascript').
+    var bankcardList = !{JSON.stringify(bankcardList)};
+    console.log(bankcardList)
+    function openURL(i) {
+      console.log(bankcardList.banks[i])
+      window.location = addqueryarg("/page/user/editBankcard", {
+        bankName: bankcardList.banks[i].bankName,
+        userBankNo:bankcardList.banks[i].userBankNo.substr(bankcardList.banks[i].userBankNo.length - 4),
+        bankCode:bankcardList.banks[i].bankCode,
+        branchBankName:bankcardList.banks[i].branchBankName,
+        branchBank:bankcardList.banks[i].branchBank
+      })
+    }
+
+  script(type = 'text/javascript', src = '/static/js/bankcardList.js').

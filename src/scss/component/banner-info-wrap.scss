@@ -1,0 +1,60 @@
+.banner-info-wrap{
+  padding: 50px 0 45px 0;
+  background-color: #fff;
+  color: #fff;
+  font-size: 3px;
+  text-align: center;
+  h5{
+    margin: 0;
+    color: $brown-text-color;
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  h1{
+    margin: 0;
+    margin-bottom: 25px;
+    color: #96786e;
+    font-size: 60px;
+    text-align: center;
+    font-weight: $main-font-weight;
+  }
+  p{
+    margin: 0;
+    color: $main-text-color;
+    font-size: 32px;
+    text-align: center;
+    min-height: 36px;
+  }
+  .my-detail{
+    position: relative;
+    margin-top: 45px;
+    line-height: 70px;
+    .sub-wrap{
+      display: inline-block;
+      width: 350px;
+      vertical-align: top;
+      color: #96786e;
+      p{
+        font-size: 28px;
+        line-height: 1;
+        text-align: center;
+        font-weight: $main-font-weight;
+      }
+      .title{
+        color: $brown-text-color;
+        margin-bottom: 20px;
+      }
+    }
+    .vertical{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0 auto;
+      height: 100%;
+      width: 1px;
+      background-color: $main-text-color;
+    }
+  }
+}

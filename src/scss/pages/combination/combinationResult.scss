@@ -1,0 +1,204 @@
+.top {
+  height: 252px;
+  background-color: #fff;
+  position: relative;
+}
+
+.top_img {
+  width: 461px;
+  height: 83px;
+  background: url("/static/asset/sgjg.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 72px;
+  left: 146px;
+}
+
+.top_left {
+  width: 109px;
+  height: 26px;
+  line-height: 26px;
+  color: #987770;
+  font-size: 26px;
+  position: absolute;
+  left: 135px;
+  bottom: 45px;
+  text-align: center;
+}
+
+.top_right {
+  width: 109px;
+  height: 26px;
+  line-height: 26px;
+  color: #CBCBCB;
+  font-size: 26px;
+  position: absolute;
+  right: 130px;
+  bottom: 45px;
+  text-align: center;
+}
+
+.listone {
+  height: 86px;
+  border-top: 1px solid #DCDCDC;
+  color: #957870;
+  font-size: 30px;
+  line-height: 86px;
+  padding: 0 30px 0 48px;
+  background-color: #fff;
+}
+
+.listone div:nth-child(1) {
+  float: left;
+}
+
+.listone div:nth-child(2) {
+  float: right;
+}
+
+.btn {
+  width: 642px;
+  height: 88px;
+  background-color: #FFAA01;
+  text-align: center;
+  line-height: 88px;
+  color: white;
+  border-radius: 44px;
+  margin: 110px auto 30px;
+}
+
+.fund_pay {
+}
+
+.fund_pay_num {
+  font-size: 24px;
+  color: #808080;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 72px;
+  span {
+    color: red;
+  }
+}
+
+.fund_pay_con {
+  width: 656px;
+  margin: 0 auto;
+}
+
+.fund_pay_title {
+  font-size: 27px;
+  line-height: 55px;
+  color: #808080;
+  height: 55px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.fund_pay_title div:nth-child(1) {
+  float: left;
+}
+
+.fund_pay_title div:nth-child(2) {
+  float: right;
+}
+
+.fund_pay_main {
+  display: none;
+  width: 750px;
+  padding: 30px 47px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.fund_pay_main .fund_pay_main_top {
+  color: #918F90;
+  font-size: 25px;
+  line-height: 45px;
+  height: 45px;
+}
+
+.fund_pay_main .fund_pay_main_bot {
+  color: #918F90;
+  font-size: 20px;
+  line-height: 30px;
+  height: 30px;
+}
+
+.fund_pay_main .fund_pay_main_top div:nth-child(1) {
+  font-size: 25px;
+  float: left;
+}
+
+.fontclolr{
+  color: #96786E;
+}
+
+.fund_pay_main .fund_pay_main_top div:nth-child(2) {
+  font-size: 25px;
+  color: #918F90;
+  float: right;
+}
+
+.fund_pay_main .fund_pay_main_bot div:nth-child(1) {
+  color: #918F90;
+  float: left;
+}
+
+.fund_pay_main .fund_pay_main_bot div:nth-child(2) {
+  color: #918F90;
+  float: right;
+}
+
+.openbtn {
+  width: 200px;
+  font-size: 27px;
+  margin: 27px auto;
+  position: relative;
+}
+
+.list_icon{
+  width: 28px;
+  height: 15px;
+  background-image: url('/static/asset/icon_rotate.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 10px;
+  right:0;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.rotate{
+  transform-origin:center center; //旋转中心要是正中间 才行
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transition: transform 0.2s; //过度时间 可调
+  -moz-transition: -moz-transform 0.2s;
+  -moz-transition: -moz-transform 0.2s;
+  -o-transition: -o-transform 0.2s;
+  -ms-transition: -ms-transform 0.2s;
+}
+.rotate1{
+  transform-origin:center center;
+  transform: rotate(0deg); //返回原点
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transition: transform 0.2s;
+  -moz-transition: -moz-transform 0.2s;
+  -moz-transition: -moz-transform 0.2s;
+  -o-transition: -o-transform 0.2s;
+  -ms-transition: -ms-transform 0.2s;
+}
+
+
+.sgjg_title{
+  width: 750px;
+  height: 131px;
+  background: url("/static/asset/sgjg_b.jpg") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}

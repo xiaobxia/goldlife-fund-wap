@@ -1,0 +1,86 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title=fundName
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.assets-fund-assetDetail
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title
+        p=fundName
+        p=fundCode
+      a.mui-pull-right.link-a#to-detail(data-href='/page/fund/fundDetail?fundCode='+fundCode) 详情
+    .content-body
+      //- ul.mui-table-view.transparent
+      //-   li.mui-table-view-cell
+      //-     | 该基金最近有分红配送，分配信息
+      //-     span >
+      .banner-info-wrap
+        .my-detail
+          .sub-wrap
+            p.title 总资产(元)
+            p.large-value(class=worthValue!=='0'?(worthValue<0?'green-text':'red-text'):'')=worthValueString
+          .vertical
+          .sub-wrap
+            .list-item
+              span.label 累计收益
+              span.value(class=totalAccumIncome!==0?(totalAccumIncome<0?'green-text':'red-text'):'')=totalAccumIncomeString
+            .list-item
+              span.label='日收益(' + netValueDateString + ')'
+              span.value(class=todayIncome!=='0'?(todayIncome<0?'green-text':'red-text'):'')=todayIncomeString
+      if appFundType == 1109
+        .fund-block
+          div.with-bottom
+            .left
+              span.label='7日年化(' + netValueDateString + ')'
+              span.value=latestWeeklyYield
+            .right
+              span.label 持有份额
+              span.value=currentSharesString
+          div
+            .left#view-info-btn
+              span.label 未付收益
+                span.warn-icon.white i
+              span.value=unpaidIncomeString
+            .right
+              span.label 收益结转日
+              span.value=clearDate
+      else
+        .fund-block
+          div
+            .left
+              span.label='净值(' + netValueDateString + ')'
+              span.value=netValueString
+            .right
+              span.label 持有份额
+              span.value=currentSharesString
+      div.buy-info
+        .title-wrap
+          .item 支付账户
+          .item 可用份额(份)
+          .item 操作
+        .detail-wrap
+          .item.icon-wrap
+            .icon(class=bankCode)
+            .text-block
+              p=bankName
+              p='尾号 ' + bankAccount.substr(-4, 4)
+          .item=enableSharesString
+          .item#redeem-btn 赎回
+      ul.mui-table-view(id=appFundType == 1109?'warn-fenhong':(canDividend == 'true'?'change-fenhong':'no-change'))
+        a(data-href=appFundType == 1109?'':'/page/assets/fund/selectDividend?tradeAcco='+tradeAccount+'&taAcco='+taAccount+'&fundCode='+fundCode+'&autoBuy='+autoBuy+'&fundName='+fundName).mui-table-view-cell
+          span.mui-navigate-right
+            span.label 分红方式
+            span.value=autoBuy==='1'?'现金分红':'红利再投资'
+      a#buy-btn.mui-btn.mui-btn-warning.center(type='button')
+        | 购买
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript', src='/static/js/fundAssetDetail.js')
+

@@ -1,0 +1,44 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.picker.all.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/professionCode.js')
+    title 账户信息修改
+    script(type='text/javascript').
+      setAdaptive();
+  body.user-messageEdit
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 账户信息修改
+    .content-body
+      ul.mui-table-view.inside-bottom
+        li#address-btn.mui-table-view-cell
+          a.mui-navigate-right
+            span.label 居住地址
+            span.value#userAddress-text 请选择
+        li.mui-table-view-cell#profession-btn
+          a.mui-navigate-right
+            span.label 职业
+            span.value#profession-text 其它
+        li.mui-table-view-cell#selfSustain-btn
+          a.mui-navigate-right
+            span.label 实际受益人、实际控制人
+            span.value#selfSustain-text 本人
+      form.mui-input-group#owner-wrap
+        .mui-input-row
+          label 实际受益人
+          input(type='text', placeholder='请填写实际受益人姓名' id="beneficiary-input")
+        .mui-input-row
+          label 实际控制人
+          input(type='text', placeholder='请填写实际控制人姓名' id="owner-input")
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    button#next-btn.mui-btn.mui-btn-warning.center(type='button')
+        | 完成
+    script(type='text/javascript', src='/static/lib/mui.picker.all.js')
+    script(type='text/javascript', src='/static/js/messageEdit.js')

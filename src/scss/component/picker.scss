@@ -1,0 +1,59 @@
+.mui-poppicker {
+  //display: none;
+  //&.mui-active {
+  //  display: block;
+  //}
+  transform: translateY(523px);
+  .mui-poppicker-header {
+    position: relative;
+    height: 90px;
+    background-color: #fff;
+    padding: 0;
+    border-bottom: 1px solid $grey-border-color;
+    .mui-poppicker-title{
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0 auto;
+      height: 100%;
+      width: 400px;
+      text-align: center;
+      line-height: 90px;
+      color: rgb(190, 190, 190);
+      font-size: 32px;
+    }
+    .mui-btn{
+      height: 90px;
+      padding: 0 35px;
+      line-height: 90px;
+      background-color: #fff;
+      border: none;
+      color: $yellow;
+      font-size: 32px;
+    }
+    .mui-poppicker-btn-cancel {
+      background-color: #fff;
+      color: $yellow;
+    }
+  }
+  .mui-poppicker-body {
+    height: 430px;
+    .mui-picker {
+      background-color: #fff;
+    }
+    background-color: #fff;
+  }
+  .mui-poppicker-btn-ok {
+
+  }
+  .mui-pciker-list, .mui-pciker-rule {
+    height: 80px;
+    line-height: 80px;
+    color: rgb(190, 190, 190);
+  }
+  .mui-pciker-list li{
+    font-size: 36px;
+  }
+}

@@ -1,0 +1,65 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/moment.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    title 定投管理
+    script(type='text/javascript').
+      setAdaptive();
+  body.user-castSurely
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 定投管理
+    .content-body
+      .main
+        //.content
+        //  .part1(class='font1 numcolor') 嘉城新双赢B&nbsp;&nbsp;000093
+        //  .part2(class='font2') 银行卡:农业银行******2233
+        //  .part3(class='font2') 每月3日定投:
+        //    span(class='numcolor') 100.00元
+        //  .part4(class='font2') 预计扣款日期:
+        //    span(class='numcolor') 2017-09-03
+        //  .part4(class='font2') 累计定投
+        //    span(class='numcolor') 0.00元
+        //  .part5
+        //    .btn1(class='btnstyle stop') 终止
+        //    .btn2(class='btnstyle edit') 修改
+        //.content
+        //  .part1(class='font1 numcolor') 嘉城新双赢B&nbsp;&nbsp;000093
+        //  .part2(class='font2') 银行卡:农业银行******2233
+        //  .part3(class='font2') 每月3日定投:
+        //    span(class='numcolor') 100.00元
+        //  .part4(class='font2') 预计扣款日期:
+        //    span(class='numcolor') 2017-09-03
+        //  .part4(class='font2') 累计定投
+        //    span(class='numcolor') 0.00元
+        //  .part5(class='stopnow') 已终止
+    .mui-popup-backdrop
+    .password-popup
+      .password-popup-inner
+        .password-popup-title 请输入交易密码
+        .password-popup-box-wrap
+          .box-item
+            .point
+          .box-item
+            .point
+          .box-item
+            .point
+          .box-item
+            .point
+          .box-item
+            .point
+          .box-item
+            .point
+        .password-popup-input
+          input#password-input(type='number' placeholder='')
+      .password-popup-buttons
+        span.password-popup-button.cancel 取消
+        span.password-popup-button.confirm 确定
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type = 'text/javascript', src = '/static/js/castSurely.js').

@@ -1,0 +1,45 @@
+
+.assets-index {
+  .banner-info-wrap {
+    .my-detail {
+      margin: 70px 0 75px 0;
+    }
+  }
+}
+
+.mui-table-view {
+  .mui-table-view-cell {
+    height: auto;
+  }
+  .title {
+    span {
+      margin-left: 1em;
+      font-size: 28px;
+      color: $main-text-color;
+    }
+  }
+  .other{
+    .warn-icon{
+      margin-right: .5em;
+    }
+    font-size: 24px;
+    margin-top: 15px;
+    color: $main-text-color;
+  }
+}
+
+.sub-wrap {
+
+}
+.mui-table-view.portfolio-list{
+  margin: 0;
+}
+
+
+.novalue{
+  background: url("/static/asset/novalue.jpg")no-repeat;
+  width: 750px;
+  height: 570px;
+  -webkit-background-size: cover;
+  background-size: cover;
+}

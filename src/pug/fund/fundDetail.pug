@@ -1,0 +1,113 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/echarts.min.js')
+    title 基金详情
+    script(type='text/javascript').
+      setAdaptive();
+  body.fund-fundDetail
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1#title.mui-title
+        div
+        div
+    .content-body
+      .profit
+        .profit_left
+          div 七日年化
+          div 4.54%
+          div
+            ul
+              li 货币型
+              li 低风险
+        .profit_right
+          div 万份收益(11-21)
+          div 1.2350
+      .chart
+        .chart_title
+        #main.chart_data
+        .chart_btn
+          ul
+            li.btn_active 月
+            li 季
+            li 半年
+            li 年
+      .profit_list
+        .profit_list_tab(style='border-bottom: 1px solid #cccccc;')
+          .selected.J_doc.span3 历史七日年化
+          .J_notice.span3 历史业绩
+        #oneweek
+          .oneLine_title
+            .span_title_4 日期
+            .span_title_4 单位净值
+            .span_title_4 累计净值
+            .span_title_4 日增涨率
+          .oneLine
+            .span_con_4 17-11-28
+            .span_con_4 1.0990
+            .span_con_4 1.0990
+            .span_con_4(style='color:red') 3.87%
+          .oneLine
+            .span_con_4 17-11-28
+            .span_con_4 1.0990
+            .span_con_4 1.0990
+            .span_con_4(style='color:red') 3.87%
+          .oneLine
+            .span_con_4 17-11-28
+            .span_con_4 1.0990
+            .span_con_4 1.0990
+            .span_con_4(style='color:red') 3.87%
+          .oneweek_more
+            | 查看更多
+        #history(style='display:none')
+          .oneLine_title
+            .span_title_2 日期
+            .span_title_2 收益
+          .oneLine
+            .span_con_2 近一周
+            .span_con_2(style='color:red') 3.87%
+          .oneLine
+            .span_con_2 近一周
+            .span_con_2(style='color:red') 3.87%
+          .oneLine
+            .span_con_2 近一周
+            .span_con_2(style='color:red') 3.87%
+          .history_more
+            | 查看更多
+      .product
+        .product_title
+          | 产品档案
+        .product_con
+          .product_con_l 基金档案
+          .product_con_m 概况、资产配置
+          .product_con_r
+        .product_con
+          .product_con_l 基金经理
+          .product_con_m 张子法
+          .product_con_r
+        .product_con
+          .product_con_l 基金管理人
+          .product_con_m 天弘基金管理有限公司
+          .product_con_r
+        .product_con
+          .product_con_l 基金公告
+          .product_con_m 发行运作等
+          .product_con_r
+        .product_con
+          .product_con_l 交易说明
+          .product_con_m 申购、赎回流程/申购、赎回费率
+          .product_con_r
+      .rate
+        | 购买费率  
+        span 0.00%
+      .bum_btn
+        div#fund_castsurely 定投
+        div#fund_buy 购买
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type = 'text/javascript', src = '/static/js/fundDetail.js').

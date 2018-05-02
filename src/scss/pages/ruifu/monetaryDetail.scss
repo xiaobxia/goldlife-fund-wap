@@ -1,0 +1,150 @@
+body {
+  padding-top: 90px;
+  background-color: #F6F6F6;
+}
+
+.fundPart_1 {
+  background-color: #FFAA01;
+  height: 285px;
+  color: #fff;
+  text-align: center;
+}
+
+.fundPart_1 div:nth-child(1) {
+  font-size: 28px;
+  line-height: 72px;
+}
+
+.fundPart_1 div:nth-child(2) {
+  font-size: 69px;
+  line-height: 89px;
+}
+
+.fundPart_1 div:nth-child(3) {
+  font-size: 30px;
+  line-height: 102px;
+}
+
+.fundPart_2 {
+  height: 130px;
+  background-color: #FFB725;
+}
+
+.fundPart_2 div {
+  width: 248px;
+  float: left;
+  padding: 33px 0 0 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.fundPart_2 div:nth-child(3){
+  border-right: 1px solid #FFAA01;
+}
+
+.fundPart_2 div div:nth-child(1) {
+  color: #FED49A;
+  padding: 0;
+  line-height: 38px;
+}
+
+.fundPart_2 div div:nth-child(2) {
+  color: #fff;
+  padding: 0;
+  line-height: 40px;
+}
+
+
+.fundPart_3 {
+  height: 130px;
+  background-color: #fff;
+}
+
+.fundPart_3 div {
+  width: 248px;
+  float: left;
+  padding: 33px 0 0 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.fundPart_3 div div:nth-child(1) {
+  font-size:23px;
+  color: red;
+  border:1px solid red;
+  padding: 0;
+  height: 35px;
+  width: 70px;
+  line-height: 33px;
+  border-radius: 2px;
+  margin-left: 90px;
+}
+
+.fundPart_3 div div:nth-child(2) {
+  font-size:23px;
+  color: #918F90;
+  padding: 0;
+  line-height: 40px;
+  margin-top: 10px;
+}
+
+.charts{
+  height:600px;
+  background-color: #fff;
+  margin-top: 15px;
+}
+.fundPart_4{
+  margin-top: 15px;
+  background-color: #fff;
+  height: 85px;
+  padding-left: 30px;
+  margin-bottom: 120px;
+  position: relative;
+}
+.fundPart_4 div:nth-child(1){
+  font-size:32px;
+  line-height:85px;
+  color: #97766D;
+}
+
+.fundPart_4 div:nth-child(2){
+  width: 17px;
+  height: 32px;
+  background:url("/static/asset/icon.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 27px;
+  top: 27px;
+}
+
+.bum_btn{
+  height: 96px;
+  position: fixed;
+  bottom: 0;
+  width: 750px;
+  z-index: 99;
+}
+.bum_btn div{
+  float: left;
+  text-align: center;
+}
+.bum_btn div:nth-child(1){
+  height: 96px;
+  width: 50%;
+  line-height: 96px;
+  //color: #BEBEBE;
+  //background-color: #fff;
+}
+.bum_btn div:nth-child(2){
+  height: 96px;
+  width: 50%;
+  line-height: 96px;
+  color: #fff;
+  background-color: #FFAA01;
+}
+
+#charts{
+  padding-top: 40px;
+  height: 600px;
+  background-color: #fff;
+}

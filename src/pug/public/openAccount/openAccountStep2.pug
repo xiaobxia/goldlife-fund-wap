@@ -1,0 +1,70 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 开户
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.picker.all.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.public-openAccount-openAccountStep2
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 开户
+    .content-body
+      .step-wrap
+        .step-1-wrap.step-index-wrap.active-right
+          .right-bar
+          .index-wrap 1
+          .step-content 设置交易密码
+        .step-2-wrap.step-index-wrap.active-left
+          .left-bar
+          .right-bar
+          .index-wrap 2
+          .step-content 绑定银行卡号
+        .step-3-wrap.step-index-wrap
+          .left-bar
+          .index-wrap 3
+          .step-content 添加开户信息
+      ul.mui-table-view.inside-both
+        li.mui-table-view-cell
+          span.label.no-width 持卡人
+            span#userName-text
+          a.quick-btn.normal(href="/page/public/quotas") 支持的银行卡
+      .mui-input-group
+        .mui-input-row
+          label 银行卡号
+          input#userBankNo-input(type='number', placeholder='请输入银行卡号')
+      ul.mui-table-view.inside-both
+        li.mui-table-view-cell#bank-btn
+          span.label 银行名称
+          span.placeholder#bankName-text 银行名称
+        li.mui-table-view-cell#selectSunBranch-btn
+          a.mui-navigate-right
+            span.label 开户支行名称
+            span.placeholder#vcBankname-text 请选择开户支行名称
+      div.hint-block
+        span.warn-icon i
+        | 为了保障您的资金正常赎回到账，请输入正确支行名称
+      form.mui-input-group.border
+        .mui-input-row
+          label 银行预留号码
+          input#userBankMobile-input(type='number', placeholder='请输入银行预留手机号码')
+        .mui-input-row
+          label 验证码
+          input(type='number', placeholder='短信验证码' id="mobileCode-input")
+          #mobileCode-btn.quick-btn 获取验证码
+          #time-btn.quick-btn.hidden 60
+      div.check-wrap
+        input(type="checkbox" id="agreement-box")
+        label 我已阅读并同意
+        a#to-auto 《自动扣款授权书》
+      button#next-btn.mui-btn.mui-btn-warning.center.disabled(type='button')
+        | 下一步
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript', src='/static/lib/mui.picker.all.js')
+    script(type='text/javascript', src='/static/js/openAccountStep2.js')

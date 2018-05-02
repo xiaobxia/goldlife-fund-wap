@@ -1,0 +1,123 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript', src='/static/lib/vue.min.js')
+    script(type='text/javascript', src='/static/lib/echarts.min.js')
+    title 组合详情
+    script(type='text/javascript').
+      setAdaptive();
+  body.combination-combinationDetail
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 组合详情
+    .content-body
+      .profit
+        h2.profit-t
+          | 陈大大锐意进取
+        .profit-m.clearfix
+          ul
+            li.baseAnnualizedIncome
+              | +13.29
+              a(href='javascript:void(0);') %
+            li.accumulatedIncome
+              | +13.29
+              a(href='javascript:void(0);') %
+        .profit-b.clearfix
+          ul
+            li
+              | 年化收益(02-07)
+            li
+              | 累计收益(02-07)
+      .profit_day.clearfix
+        ul
+          li.dailyCent_con
+            | 日涨幅(02-07)
+          li.dailyCent
+            | +0.67%
+          li.runDay
+            | 已运行65天
+      .profit_main
+        // 组合策略优势
+        .profit_main_a
+          div 组合详情
+          .createDate
+            | 2016-10-17成立
+        .profit_main_a_con
+          | 今年八月时港股行情处于强势特征,超配投资港股的基金.几年八月时港股行情处于强势特征,超配投资港股的基金.今年八月时港股行情处于强势特征,超配投资港股的基金.
+        .profit_main_charts
+          div 业绩走势图
+          #main
+          .charts_btn
+            ul
+              li.btn_active 近一月
+              li 近三月
+              li 近一年
+              li 成立以来
+      .profit_list.clearfix
+        .profit_list_t
+          div 组合最新持仓比
+        .profit_list_b
+          .list_data.clearfix
+            ul
+              li
+                p.name 混合基金A
+                span.type_num 002211混合型
+                p.proportion 30%
+                p.list_icon
+              li
+                p.name 混合基金A
+                span.type_num 002211混合型
+                p.proportion 30%
+                p.list_icon
+              li
+                p.name 混合基金A
+                span.type_num 002211混合型
+                p.proportion 30%
+                p.list_icon
+              li
+                p.name 混合基金A
+                span.type_num 002211混合型
+                p.proportion 30%
+                p.list_icon
+              li
+                p.name 混合基金A
+                span.type_num 002211混合型
+                p.proportion 30%
+                p.list_icon
+      // 调仓展示部分
+      .warehouse_list.clearfix
+        .warehouse_list_t
+          div 最近调仓
+          div 2017-07-03
+        .warehouse_list_con
+          | HTTP头信息“Expires”和“Cache-Control”为应用程序服务器提供了一个控制浏览器和代理服务器上缓存的机制。HTTP头信息Expires告诉代理服务器它的缓存页面何时将过期。HTTP1.1规范中新定义的头信息Cache-Control可以通知浏览器不缓存任何页
+        .warehouse_list_b
+          .list_data.clearfix
+            ul
+              li
+                p.name 混合基金A
+                span.type_num 002211混合型
+                p.proportion_old 30%
+                p.list_arrow
+                p.proportion 30%
+                p.list_icon
+        .warehouse_btn
+          span 查看调仓历史>
+      .transaction
+        // <img src="./img/jysm.jpg" alt="">
+      .bum_btn
+        div 一键购买
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript').
+      var combinationDetail = !{JSON.stringify(combinationDetail)};
+      function loadURL(data) {
+        window.location =data
+      }
+      console.log(combinationDetail)
+    script(type='text/javascript',src='/static/js/combinationDetail.js').

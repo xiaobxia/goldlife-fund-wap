@@ -1,0 +1,126 @@
+.content-body {
+  padding-top: 110px;
+}
+
+.mui-table-view {
+  .mui-table-view-cell {
+    display: block;
+    width: 725px;
+    padding: 25px;
+    font-size: 34px;
+    line-height: normal;
+    color: $brown-text-color;
+    height: auto;
+    //overflow: hidden;
+    //text-overflow: ellipsis;
+    //white-space: nowrap;
+    border-bottom: 1px solid $grey-border-color;
+    .mui-navigate-right{
+      float: right;
+      font-size: 34px;
+      color: $brown-text-color;
+    }
+  }
+  a:last-child{
+    .mui-table-view-cell{
+      border-bottom: none;
+    }
+  }
+  &.transparent {
+    .mui-table-view-cell {
+      font-size: 30px;
+      color: rgb(100, 100, 100);
+    }
+  }
+}
+
+.mui-search.mui-active {
+  &:before {
+    position: static;
+    display: inline;
+    height: auto;
+    width: auto;
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 0 15px;
+    padding-top: 5px;
+    font-size: 45px;
+    color: rgb(134, 134, 134);
+  }
+  input {
+    position: absolute;
+    left: 55px;
+  }
+}
+
+.mui-search {
+  margin: 0 20px 20px 20px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 10px;
+  line-height: 60px;
+  overflow: visible;
+  &.mui-active{
+    width: 610px;
+    button {
+      display: block;
+    }
+    input{
+      width: 560px;
+    }
+  }
+
+  button{
+    display: none;
+    position: absolute;
+    right: -116px;
+    top: 0;
+    height: 100%;
+    width: 116px;
+    font-size: 32px;
+    line-height: 46px;
+    text-align: center;
+    color: $brown-text-color;
+    background-color: transparent;
+    border: none;
+  }
+  input {
+    margin: 0;
+    height: 60px;
+    background-color: #fff;
+    font-size: 32px;
+    @include placeholder-color($grey-text-color);
+    color: $brown-text-color;
+  }
+  .mui-placeholder {
+    line-height: 60px;
+    text-align: center;
+    .mui-icon-search {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      height: 60px;
+      line-height: 60px;
+      width: 68px;
+      &:before {
+        padding: 0 15px;
+        font-size: 45px;
+        color: rgb(134, 134, 134);
+      }
+    }
+    span {
+      font-size: 32px;
+      color: $grey-text-color;
+      vertical-align: middle;
+    }
+  }
+  .mui-icon-clear{
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
+  }
+}

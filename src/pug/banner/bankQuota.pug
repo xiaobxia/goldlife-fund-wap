@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 银行限额
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    style.
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body(style='background-color: #F6F6F6')
+    header#header.mui-bar.mui-bar-nav.white
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 银行限额
+    .content-body
+      div(style='width: 100%;')
+        img(src='/static/asset/bankQuota.jpg', alt='', style='width: 100%')
+    script(type='text/javascript', src='/static/js/commonBody.js')

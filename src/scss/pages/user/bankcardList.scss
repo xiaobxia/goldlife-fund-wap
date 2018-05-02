@@ -1,0 +1,51 @@
+.user-bankcardList {
+  background-color: #F6F6F6;
+}
+
+.bankcard {
+  width: 700px;
+  height: 200px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 18px;
+  padding-left: 161px;
+  padding-top: 35px;
+  position: relative;
+}
+
+.font1{
+  font-size: 34px;
+  line-height: 70px;
+  color: #95796E;
+}
+
+.font2{
+  font-size: 28px;
+  line-height: 64px;
+  color: #95796E;
+}
+
+.font3{
+  font-size: 28px;
+  line-height: 64px;
+  color: #FFAA01;
+}
+
+.icon{
+  display: block;
+  width:80px;
+  height:80px;
+  background-size: cover;
+  position: absolute;
+  top:60px;
+  left:41px;
+}
+
+.nobank{
+  width: 750px;
+  height:540px;
+  background: url("/static/asset/bankList.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: none;
+}

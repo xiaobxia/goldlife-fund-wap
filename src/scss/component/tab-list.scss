@@ -1,0 +1,18 @@
+.mui-segmented-control.mui-segmented-control-inverted{
+  margin: 0;
+  padding: 0;
+  height: 90px;
+  line-height: 90px;
+  background-color: #fff;
+  .mui-control-item{
+    padding: 0;
+    line-height: 88px;
+    color:$brown-text-color;
+    font-size: 32px;
+    border-bottom: 2px solid #eee;
+  }
+  .mui-control-item.mui-active{
+    color:$brown-text-color;
+    border-bottom: 2px solid $main-color;
+  }
+}

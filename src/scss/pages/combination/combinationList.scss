@@ -1,0 +1,72 @@
+
+body{
+  padding-top: 90px;
+}
+body{
+  font-family: "Helvetica";
+}
+.fundPortfollo{
+  height:168px;
+  background-color: white;
+  margin-top: 20px;
+  padding:25px 0 28px 45px;
+}
+
+.fundPortfollo_l{
+  width: 200px;
+  height:115px;
+  border-right: 1px solid #DCDCDC;
+  float: left;
+  padding-top: 7px;
+}
+.fundPortfollo_l ul{
+  width: 200px;
+  height:168px;
+  margin: 0;
+  padding:0;
+}
+.fundPortfollo_l ul li{
+  list-style: none;
+}
+
+.fundPortfollo_l ul li:nth-child(1){
+  font-size:32px;
+  line-height: 58px;
+  color: red;
+  a{
+    font-size: 20px;
+    text-decoration: none;
+    color: red;
+  }
+}
+.fundPortfollo_l ul li:nth-child(2){
+  font-size:28px;
+  line-height: 48px;
+  color: #BAB0AF;
+}
+
+.fundPortfollo_r{
+  height:168px;
+  float: left;
+  padding-top: 7px;
+  padding-left: 37px;
+}
+
+.fundPortfollo_r ul{
+  height:168px;
+  margin: 0;
+}
+.fundPortfollo_r ul li{
+  list-style: none;
+}
+
+.fundPortfollo_r ul li:nth-child(1){
+  font-size:28px;
+  line-height: 58px;
+  color: #94776F;
+}
+.fundPortfollo_r ul li:nth-child(2){
+  font-size:28px;
+  line-height: 48px;
+  color: #BAB0AF;
+}

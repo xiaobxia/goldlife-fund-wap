@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title 交易记录
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    link(rel='stylesheet', type='text/css', href='/static/lib/mui.min.css')
+    link(rel='stylesheet', type='text/css', href='/static/css/main.css')
+    script(type='text/javascript', src='/static/lib/mui.js')
+    script(type='text/javascript', src='/static/lib/util.js')
+    script(type='text/javascript').
+      setAdaptive();
+  body.assets-ruifubao-records
+    header#header.mui-bar.mui-bar-nav
+      a.mui-icon.mui-icon-left-nav.mui-pull-left
+      h1.mui-title 交易记录
+    #segmentedControl.mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-primary
+      a.mui-control-item.mui-active#record-btn(href='#item1') 交易
+      a.mui-control-item#dividend-btn(href='#item2') 分红
+    .content-body
+      div
+        #item1.mui-control-content.mui-active
+          ul.mui-table-view.portfolio-list#recordList
+          div.page-end#page-end-record 加载中...
+        #item2.mui-control-content
+          ul.mui-table-view.portfolio-list#dividendList
+          div.page-end#page-end-dividend 加载中...
+    script(type='text/javascript', src='/static/js/commonBody.js')
+    script(type='text/javascript', src='/static/js/ruifubaoRecords.js')

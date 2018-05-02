@@ -1,0 +1,159 @@
+
+body{
+  padding-top: 90px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.profit_list_t{
+  height: 87px;
+  //border-bottom: 0.01rem solid #929091;
+  background-color: white;
+  margin-top: 15px;
+}
+
+.profit_list_t .list_icon{
+  width: 50px;
+  height: 50px;
+  background-image: url('/static/asset/icon_3.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 18.5px;
+  right:18.5px;
+  -webkit-tap-highlight-color:transparent;
+}
+.profit_list_t div:nth-child(1){
+  font-size:29px;
+  color: #957870;
+  line-height: 87px;
+  padding-left: 43px;
+  position:relative;
+  //border-bottom: 0.01rem solid #929091;
+}
+
+.list_data ul{
+
+}
+
+.list_data ul li{
+  height: 121px;
+  position: relative;
+  background-color: white;
+  border-top: 1px solid #929091;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.list_data ul li:nth-child(1){
+
+  border-top: none;
+}
+
+.list_data .name{
+  font-size:26px;
+  color: #9E837C;
+  position: absolute;
+  top:25px;
+  left:43px;
+}
+.list_data .type_num{
+  font-size:21px;
+  color: #929091;
+  position: absolute;
+  top:70px;
+  left:43px;
+}
+
+.list_data .proportion{
+  font-size:25px;
+  color: #929091;
+  position: absolute;
+  line-height:25px;
+  top: 48px;
+  right:66px;
+}
+
+
+.list_data .proportion_old{
+  font-size:25px;
+  color: #929091;
+  position: absolute;
+  line-height:25px;
+  top: 48px;
+  right:260px;
+}
+.list_icon{
+  width: 13px;
+  height: 24px;
+  background-image: url('../../../asset/icon_1.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 49px;
+  right:33px;
+}
+
+.profit_reason{
+  padding-left: 43px;
+  background-color: #fff;
+  padding-right: 33px;
+  color: #808080;
+  border-top: 1px solid #929091;
+}
+.profit_reason_title{
+  color:#BBBBBB;
+  font-size:24px;
+  line-height: 64px;
+  height:64px;
+}
+.profit_reason_con{
+  font-size:21px;
+  line-height:29px;
+  padding-bottom: 18px;
+  color: #929091;
+}
+
+.profit_list_b_title{
+  height: 70px;
+  padding-left:43px;
+}
+.profit_list_b_title div{
+  font-size:26px;
+  line-height:70px;
+  float: left;
+  color: #94786D;
+}
+
+.profit_list_b_title div:nth-child(1){
+  margin-right: 266px;
+}
+.profit_list_b_title div:nth-child(2){
+  margin-right: 104px;
+}
+
+
+.rotate{
+  transform-origin:center center; //旋转中心要是正中间 才行
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transition: transform 0.2s; //过度时间 可调
+  -moz-transition: -moz-transform 0.2s;
+  -moz-transition: -moz-transform 0.2s;
+  -o-transition: -o-transform 0.2s;
+  -ms-transition: -ms-transform 0.2s;
+}
+.rotate1{
+  transform-origin:center center;
+  transform: rotate(0deg); //返回原点
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transition: transform 0.2s;
+  -moz-transition: -moz-transform 0.2s;
+  -moz-transition: -moz-transform 0.2s;
+  -o-transition: -o-transform 0.2s;
+  -ms-transition: -ms-transform 0.2s;
+}

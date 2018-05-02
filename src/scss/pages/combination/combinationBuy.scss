@@ -1,0 +1,163 @@
+
+body {
+  font-family: "Microsoft YaHei";
+  padding-top: 90px;
+}
+
+.btn {
+  width: 642px;
+  height: 88px;
+  background-color: #FFAA01;
+  text-align: center;
+  line-height: 88px;
+  color: white;
+  border-radius: 44px;
+  margin: 110px auto 0;
+}
+
+.fund_pay {
+}
+
+.fund_pay_num {
+  font-size: 24px;
+  color: #808080;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 72px;
+  width: 230px;
+  position: relative;
+  span {
+    color: red;
+  }
+}
+
+.fund_pay_con {
+  //width: 656px;
+  margin: 0 auto;
+}
+
+.fund_pay_title {
+  font-size: 27px;
+  line-height: 55px;
+  color: #808080;
+  height: 55px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.fund_pay_title div:nth-child(1) {
+  float: left;
+}
+
+.fund_pay_title div:nth-child(2) {
+  float: right;
+}
+
+.fund_pay_main {
+  //width: 656px;
+  margin:0 auto;
+}
+
+.fund_pay_main .fund_pay_main_top {
+  color: #918F90;
+  font-size: 20px;
+  line-height: 45px;
+  height: 45px;
+}
+
+.fund_pay_main .fund_pay_main_bot {
+  color: #918F90;
+  font-size: 20px;
+  line-height: 30px;
+  height: 30px;
+}
+
+.fund_pay_main .fund_pay_main_top div:nth-child(1) {
+  font-size: 25px;
+  color: #96786E;
+  float: left;
+}
+
+.fund_pay_main .fund_pay_main_top div:nth-child(2) {
+  font-size: 20px;
+  color: #918F90;
+  float: right;
+}
+.fund_pay_main .fund_pay_main_bot div:nth-child(1){
+  color: #918F90;
+  float: left;
+}
+
+.fund_pay_main .fund_pay_main_bot div:nth-child(2){
+  color: #918F90;
+  float: right;
+}
+
+
+.list_icon{
+  width: 19px;
+  height: 10px;
+  background: url('/static/asset/icon_rotate.jpg') no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 30px;
+  right:0;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.rotate{
+  transform-origin:center center; //旋转中心要是正中间 才行
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transition: transform 0.2s; //过度时间 可调
+  -moz-transition: -moz-transform 0.2s;
+  -moz-transition: -moz-transform 0.2s;
+  -o-transition: -o-transform 0.2s;
+  -ms-transition: -ms-transform 0.2s;
+}
+.rotate1{
+  transform-origin:center center;
+  transform: rotate(0deg); //返回原点
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transition: transform 0.2s;
+  -moz-transition: -moz-transform 0.2s;
+  -moz-transition: -moz-transform 0.2s;
+  -o-transition: -o-transform 0.2s;
+  -ms-transition: -ms-transform 0.2s;
+}
+.slide{
+  display: none;
+}
+
+.title_message{
+  font-size:24px;
+  height: 33px;
+  margin-top: 45px;
+  line-height: 25px;
+  position: relative;
+}
+.title_message input{
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border: 1px solid #666666;
+  position: absolute;
+  top:0;
+  left:180px;
+}
+
+.title_message div{
+  display: inline-block;
+  position: absolute;
+  top:0;
+  right:190px;
+}
+
+.title_message div a{
+  color: #FFAA01;
+}

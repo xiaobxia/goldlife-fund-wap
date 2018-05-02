@@ -1,0 +1,56 @@
+@import "var/var";
+@import "./var/core";
+@import "component/index";
+body{
+  padding-top: 90px;
+}
+.mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech {
+  font-size: 40px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  height: 100%;
+  width: 76px;
+  line-height: 100%;
+  top: 25px;
+  text-align: center;
+  color: #999;
+}
+.mui-icon {
+  font-family: Muiicons;
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+.forget{
+  float: right;
+}
+.btn{
+  width: 642px;
+  height: 88px;
+  background-color: #FFAA01;
+  text-align: center;
+  line-height: 88px;
+  color:white;
+  border-radius: 44px;
+  margin: 110px auto;
+}
+.message{
+  position: relative;
+}
+
+.message_btn{
+  position: absolute;
+  right: 0;
+  top: 15%;
+  width: 100px;
+  height: 70px;
+  line-height: 70px;
+  background-color: #FFAA01;
+  color: #fff;
+  text-align: center;
+}
